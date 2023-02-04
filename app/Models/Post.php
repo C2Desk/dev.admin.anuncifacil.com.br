@@ -14,6 +14,7 @@ class Post extends Model
     public function getPosts()
     {
         return DB::select("SELECT * FROM posts WHERE foto LIKE '%http://%' order by id desc limit 50");
+
     }
 
     public function savePost($ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status, $data = null)

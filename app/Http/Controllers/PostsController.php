@@ -49,10 +49,10 @@ class PostsController extends Controller
         ]);
         
         $ip = $request->input('ip');
-        $titulo = $request->input('titulo');
-        $sub_titulo = $request->input('sub_titulo');
+        $titulo = $request->input('titulo_post');
+        $sub_titulo = $request->input('sub_titulo_post');
         $descr = $request->input('descr');
-        $foto = $request->input('foto');
+        $foto = $request->input('foto_post');
         $foto2 = $request->input('foto2');
         $legenda = $request->input('legenda');
         $texto = $request->input('texto');
@@ -61,13 +61,15 @@ class PostsController extends Controller
         $tipo = $request->input('tipo');
         $link = $request->input('link');
         $destaque = $request->input('destaque');
-        $status = $request->input('status');
+        $status = $request->input('status_post');
         
         $data = $request->input('data');
+      
+     
 
         $postModel->savePost($ip,$titulo,$sub_titulo,$descr,$foto,$foto2,$legenda,$texto,$video,$por,$tipo,$link,$destaque,$status);
 
-        return view('posts/create');
+      return view('posts/create');
     }
 
     /**

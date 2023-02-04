@@ -49,13 +49,32 @@
                         </div>
 
                         <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Sub-título</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sub-título" name="sub_titulo_post" />
+                        </div>
+
+                        <div class="mb-3">
                             <label for="formFile" class="form-label">Upload Imagem</label>
-                            <input class="form-control" type="file" id="formFile" name="foto_post" />
+                            <input class="form-control" type="file" id="image" name="foto_post" />
                         </div>
                         <div class="mb-3">
                             <label for="formFileMultiple" class="form-label">Upload Várias Imagens</label>
                             <input class="form-control" type="file" id="formFileMultiple" multiple name="fotos_post" />
                         </div>
+
+                        <label for="formFileMultiple" class="form-label">Status</label>
+                        <div class="mb-3">
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="status_post" value="on" id="btnradio1" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">Habilitado</label>
+                                <input type="radio" class="btn-check" name="status_post" value="off" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">Desabilitado</label>
+
+                            </div>
+                        </div>
+
+                        
 
                         <div>
                             <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
