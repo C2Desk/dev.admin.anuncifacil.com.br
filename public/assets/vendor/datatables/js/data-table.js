@@ -5,21 +5,29 @@ jQuery(document).ready(function($) {
     'use strict';
 
     if ($("table.first").length) {
-
+       
         $(document).ready(function() {
-            $('table.first').DataTable();
+            $('table.first').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.13.2/i18n/pt-BR.json"
+                }
+            } );
         });
     }
 
     /* Calender jQuery **/
-
+  
     if ($("table.second").length) {
-
+        
         $(document).ready(function() {
-         
+    
             var table = $('table.second').DataTable({
-                lengthChange: false,
-                buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.13.2/i18n/pt-BR.json"
+                },
+                dom: 'Bfrtip',
+                buttons: ['copy', 'excel', 'pdf', 'print', 'colvis'],
+                columnDefs: [  { targets: [1, 2], visible: false}]
             });
 
             table.buttons().container()
