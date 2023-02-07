@@ -22,5 +22,6 @@ Route::get('/', function () {
 Route::get('/posts', [PostsController::class, 'index']);
 Route::get('/posts/create', [PostsController::class, 'create']);
 Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save');
+/*Route::post('/posts/edit/{id}', [PostsController::class, 'edit'])->name('posts.save');*/
 
 Route::get('/publicidade', [PubController::class, 'index']);

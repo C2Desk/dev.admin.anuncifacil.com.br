@@ -26,8 +26,8 @@ jQuery(document).ready(function($) {
                     "url": "//cdn.datatables.net/plug-ins/1.13.2/i18n/pt-BR.json"
                 },
                 dom: 'Bfrtip',
-                buttons: ['copy', 'excel', 'pdf', 'print', 'colvis'],
-                columnDefs: [  { targets: [1, 2], visible: false}]
+                buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+               /* columnDefs: [  { targets: [1, 2], visible: false}]*/
             });
 
             table.buttons().container()

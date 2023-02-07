@@ -26,10 +26,10 @@
 
     </div>
     <div class="row">
-            <div class="demo-inline-spacing" style="display: flex;justify-content:left;margin-bottom: 10px; margin-top: -10px;">
-                <button type="button" class="btn btn-primary">Nova Publicidade</button>
-            </div>
+        <div class="demo-inline-spacing" style="display: flex;justify-content:left;margin-bottom: 10px; margin-top: -10px;">
+            <button type="button" class="btn btn-primary">Nova Publicidade</button>
         </div>
+    </div>
     <div class="row">
         <!-- ============================================================== -->
         <!-- data table  -->
@@ -45,21 +45,28 @@
                         <table class="table table-striped table-bordered second" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Venc.</th>
+                                    <th>Titulo</th>
+                                    <th>Categoria</th>
+                                    <th>Status</th>
+                                    <th>Enviado</th>
+                                    <th>Fotos</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($publicidade as $publi)
                                 <tr>
+                                    <td>{{$publi->vencimento}}</td>
                                     <td>{{$publi->titulo}}</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                    <td>{{$publi->tipo}}</td>
+                                    @if($publi->status == "on")
+                                    <td><span class="badge bg-label-success me-1">Habilitado</span></td>
+                                    @else
+                                    <td><span class="badge bg-label-primary me-1">Desabilitado</span></td>
+                                    @endif
+                                    <td>{{$publi->data}}</td>
+
                                     <td>
                                         <ul class="list-unstyled Imagem-list m-0 avatar-group d-flex align-items-center">
                                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
@@ -92,12 +99,13 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Venc.</th>
+                                    <th>Titulo</th>
+                                    <th>Categoria</th>
+                                    <th>Status</th>
+                                    <th>Enviado</th>
+                                    <th>Fotos</th>
+                                    <th>Ações</th>
                                 </tr>
                             </tfoot>
                         </table>

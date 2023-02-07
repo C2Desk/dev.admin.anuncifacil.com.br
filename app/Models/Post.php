@@ -13,7 +13,7 @@ class Post extends Model
 
     public function getPosts()
     {
-        return DB::select("SELECT * FROM posts WHERE foto LIKE '%http://%' order by id desc limit 50");
+        return DB::select("SELECT * FROM posts WHERE foto LIKE '%http://%' order by id desc");
 
     }
 
@@ -22,7 +22,7 @@ class Post extends Model
         $dataPost = ($data == null) ? date("Y:m:d") : $data;
 
         try {
-            $sql = "INSERT INTO anuncifacil.posts
+            $sql = "INSERT INTO anuncifacil.posts 
             (ip, no_id, `data`, hora, titulo, sub_titulo, descr, foto, foto2, legenda, texto, video, por, link, tipo, destaque, status, cliques)
             VALUES('" . $ip . "', 0, '" . $dataPost . "', '" . date("H:m:i") . "', '" . $titulo . "', '" . $sub_titulo . "', '" . $descr . "', '" . $foto . "', '" . $foto2 . "', '" . $legenda . "', '" . $texto . "', '" . $video . "', '" . $por . "', '" . $link . "', '" . $tipo . "', '" . $destaque . "', '" . $status . "', 0)";
             

@@ -44,20 +44,27 @@
                         <thead>
                             <tr>
                                 <th>Titulo</th>
+                                <th>Categoria</th>
                                 <th>Data</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
+                                <th>Destaque</th>
+                                <th>Status</th>
+                                <th>Fotos</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($posts as $post)
+                            @foreach($posts as $post)
                             <tr>
                                 <td>{{$post->titulo}}</td>
+                                <th>{{$post->tipo}}</th>
                                 <td>{{$post->data}}</td>
-                                <td>Edinburgh</td>
-                                <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                <td>{{$post->destaque}}</td>
+                                @if($post->status == "on")
+                                <td><span class="badge bg-label-success me-1">Habilitado</span></td>
+                                @else
+                                <td><span class="badge bg-label-primary me-1">Desabilitado</span></td>
+                                @endif
+
                                 <td>
                                     <ul class="list-unstyled Imagem-list m-0 avatar-group d-flex align-items-center">
                                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
@@ -77,24 +84,25 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                                            <a class="dropdown-item" href="/posts/edit/{{$post->id}}"><i class="bx bx-edit-alt me-1"></i>
                                                 Edit</a>
-                                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                            <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i>
                                                 Delete</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach
+                            @endforeach
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Titulo</th>
+                                <th>Categoria</th>
+                                <th>Data</th>
+                                <th>Destaque</th>
+                                <th>Status</th>
+                                <th>Fotos</th>
+                                <th>Ações</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -106,5 +114,5 @@
     <!--/ Hoverable Table rows -->
 
     <hr class="my-5" />
- 
+
     @endsection
