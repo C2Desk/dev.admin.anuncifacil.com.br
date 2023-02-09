@@ -28,10 +28,9 @@
                 <div class="card mb-4">
 
                     <div class="card-body">
-
+                        
                         <div class="demo-inline-spacing" style="display: flex;justify-content:left;margin-bottom: 10px; margin-top: -10px;">
                             <button type="button" class="btn btn-primary">Voltar</button>
-
                         </div>
 
                         <div class="mb-3">

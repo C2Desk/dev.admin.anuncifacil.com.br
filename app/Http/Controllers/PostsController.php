@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Entities\posts\PostEntitie;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,7 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Post $postModel)
+    public function store(Request $request, Post $postModel, PostEntitie $post)
     {
         // dd($request->input());
 
@@ -44,32 +45,35 @@ class PostsController extends Controller
             'tipo_post' => 'required',
             'titulo_post' => 'required',
             'foto_post' => 'required',
-            'fotos_post'  => 'required',
+            // 'fotos_post'  => 'required',
+            'status_post' => 'required',
             'texto_post' => 'required'
         ]);
-        
-        $ip = $request->input('ip');
-        $titulo = $request->input('titulo_post');
-        $sub_titulo = $request->input('sub_titulo_post');
-        $descr = $request->input('descr');
-        $foto = $request->input('foto_post');
-        $foto2 = $request->input('foto2');
-        $legenda = $request->input('legenda');
-        $texto = $request->input('texto');
-        $video = $request->input('video');
-        $por = $request->input('por');
-        $tipo = $request->input('tipo');
-        $link = $request->input('link');
-        $destaque = $request->input('destaque');
-        $status = $request->input('status_post');
-        
-        $data = $request->input('data');
-      
-     
 
-        $postModel->savePost($ip,$titulo,$sub_titulo,$descr,$foto,$foto2,$legenda,$texto,$video,$por,$tipo,$link,$destaque,$status);
+        $post->setIp((int) $request->input('ip'));
+        $post->setTitulo($request->input('titulo_post'));
+        $post->setSubTitulo($request->input('sub_titulo_post'));
+        // $post->setDescr($request->input('texto_post'));
+        $post->setFoto($request->input('foto_post'));
+        if($request->input('foto2') !== null || !empty($request->input('foto2')))
+            $post->setFoto2($request->input('foto2'));
+        if($request->input('legenda') !== null || !empty($request->input('legenda')))    
+        $post->setLegenda($request->input('legenda'));
+        $post->setTexto($request->input('texto_post'));
+        // $post->setVideo($request->input('video'));
+        // $post->setPor($request->input('por'));
+        $post->setTipo($request->input('tipo_post'));
+        if($request->input('link') !== null || !empty($request->input('link')))
+            $post->setLink($request->input('link'));
+        if($request->input('destaque') !== null || !empty($request->input('destaque')))
+            $post->setDestaque($request->input('destaque'));
+        $post->setStatus($request->input('status_post'));
 
-      return view('posts/create');
+        $post->setData(date("Y-m-d"));
+    
+        $postModel->savePost($post);
+
+      return redirect()->back();
     }
 
     /**
@@ -89,9 +93,19 @@ class PostsController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Post $postEntitie, $postId)
     {
-        //
+        $post = null;
+        
+        if($postId !== null && is_numeric($postId))
+        {
+            $post = $postEntitie->getPostById($postId);
+            //@TODO - verificar se o post exist, caso exista redirecionar para tela de edição se não retorna para a listagem de posts com mensagem de erro.
+        } 
+
+        return view("posts/edit", [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -103,7 +117,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        dd($request->input());
     }
 
     /**
