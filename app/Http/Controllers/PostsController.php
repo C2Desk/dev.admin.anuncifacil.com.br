@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Entities\posts\PostEntitie;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -13,121 +12,170 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //Idex: chamar tela index
+
     public function index(Post $postModel)
     {
-        $posts = $postModel->getPosts();
+        return view('posts/index');
+    }
+
+    //Paginação: chamar a lista de postagens na tela
+
+    public function paginacao()
+    {
+        $id = Post::when(request('nome') != null, function ($query) {
+            return $query->where('titulo', 'like', '%' . request('nome') . '%');
+        })->orderBy('id', 'DESC')->paginate(5);
+        return view('posts.list')->with('posts', $id);
+    }
+
+    //Search: Função de pesquisa dento de postagens na tela de paginação
+/*
+    public function search(Request $request, Post $postModel)
+    {
+        $search = $request->input('search');
+        $posts = Post::orderBy('id', 'DESC')->where('titulo', 'LIKE', '%' .  $search  . '%')->paginate(10);
         return view('posts/index', [
             'posts' => $posts
         ]);
     }
+*/
+    //Create: mandar para a pagina de criação de nova postagem.
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('posts/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request, Post $postModel, PostEntitie $post)
+    //Store: manda as informações do formulario pra model de postagem.
+
+    public function store(Request $request, Post $postModel)
     {
-        // dd($request->input());
+        $mensagens = [
 
-        $validated  = $request->validate([
-            'tipo_post' => 'required',
-            'titulo_post' => 'required',
-            'foto_post' => 'required',
-            // 'fotos_post'  => 'required',
-            'status_post' => 'required',
-            'texto_post' => 'required'
-        ]);
+            //Tipo
 
-        $post->setIp((int) $request->input('ip'));
-        $post->setTitulo($request->input('titulo_post'));
-        $post->setSubTitulo($request->input('sub_titulo_post'));
-        // $post->setDescr($request->input('texto_post'));
-        $post->setFoto($request->input('foto_post'));
-        if($request->input('foto2') !== null || !empty($request->input('foto2')))
-            $post->setFoto2($request->input('foto2'));
-        if($request->input('legenda') !== null || !empty($request->input('legenda')))    
-        $post->setLegenda($request->input('legenda'));
-        $post->setTexto($request->input('texto_post'));
-        // $post->setVideo($request->input('video'));
-        // $post->setPor($request->input('por'));
-        $post->setTipo($request->input('tipo_post'));
-        if($request->input('link') !== null || !empty($request->input('link')))
-            $post->setLink($request->input('link'));
-        if($request->input('destaque') !== null || !empty($request->input('destaque')))
-            $post->setDestaque($request->input('destaque'));
-        $post->setStatus($request->input('status_post'));
+            'tipo_post.required' => 'Selecione um tipo',
 
-        $post->setData(date("Y-m-d"));
-    
-        $postModel->savePost($post);
+            //titulo
 
-      return redirect()->back();
+            'titulo_post.required' => 'O campo titulo é obrigatório',
+            'titulo_post.min' => 'O titulo deve ter pelo menos 5 caracteres.',
+
+            //texto
+
+            'texto_post.required' => 'O campo texto é obrigatório',
+            'texto_post.min' => 'O campo texto deve ter pelo menos 5 caracteres.',
+        ];
+        $request->validate([
+            'tipo_post' => 'required|nullable',
+            'titulo_post' => 'required|nullable|min:5',
+            'texto_post' => 'required|nullable|min:5',
+        ], $mensagens);
+
+        $ip = $request->input('ip'); // Revisar #automatico
+        $tipo = $request->input('tipo_post');
+        $titulo = $request->input('titulo_post');
+        $legenda = $request->input('legenda_post');
+        $video = $request->input('video_post');
+        $sub_titulo = $request->input('sub_titulo_post'); //Não usa no banco
+        $descr = $request->input('descr_post');
+        //$foto = $request->input('foto1_post');
+        $foto2 = $request->input('foto2_post');
+        $status = $request->input('status_post');
+        $texto = $request->input('texto_post');
+        $destaque = $request->input('destaque'); //Pouco usado revisar necessidade
+
+        $por = $request->input('por'); // Revisar #automatico usuario logado
+        $link = $request->input('link'); //Pouco usado revisar necessidade
+        $data = $request->input('data');
+        $foto = $request->foto1_post->store('public/post');
+
+        $postModel->savePost($ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status);
+        return redirect('posts');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function show(Post $post)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $postEntitie, $postId)
-    {
-        $post = null;
-        
-        if($postId !== null && is_numeric($postId))
-        {
-            $post = $postEntitie->getPostById($postId);
-            //@TODO - verificar se o post exist, caso exista redirecionar para tela de edição se não retorna para a listagem de posts com mensagem de erro.
-        } 
+    //Edite: mandar para a tela de editar registro
 
-        return view("posts/edit", [
-            'post' => $post
+    public function edit(Post $postModel, $idpost)
+    {
+        if (!$postModel = Post::find($idpost)) {
+            return redirect()->back();
+        }
+        $posts = $postModel->edit($idpost);
+        return view('posts/edit', [
+            'posts' => $posts
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Post $post)
+    //Update: atualizar registro de postagem
+
+    public function update(Request $request, Post $postModel, $id)
     {
-        dd($request->input());
+        $mensagens = [
+
+            //Tipo
+
+            'tipo_post.required' => 'Selecione um tipo',
+
+            //titulo
+
+            'titulo_post.required' => 'O campo titulo é obrigatório',
+            'titulo_post.min' => 'O titulo deve ter pelo menos 5 caracteres.',
+
+            //texto
+
+            'texto_post.required' => 'O campo texto é obrigatório',
+            'texto_post.min' => 'O campo texto deve ter pelo menos 5 caracteres.',
+
+        ];
+        $request->validate([
+            'tipo_post' => 'required|nullable',
+            'titulo_post' => 'required|nullable|min:5',
+            'texto_post' => 'required|nullable|min:5',
+        ], $mensagens);
+
+        $id = $request->input('id_post');
+        $ip = $request->input('ip');
+        $titulo = $request->input('titulo_post');
+        $sub_titulo = $request->input('sub_titulo_post');
+        $descr = $request->input('descr');
+        // $foto = $request->input('foto_post');
+        $foto2 = $request->input('foto2');
+        $legenda = $request->input('legenda');
+        $texto = $request->input('texto');
+        $video = $request->input('video');
+        $por = $request->input('por');
+        $tipo = $request->input('tipo');
+        $link = $request->input('link');
+        $destaque = $request->input('destaque');
+        $status = $request->input('status_post');
+
+        //@fix-me verificar configurações da pasta public no storage
+        //  $foto = $request->foto1_post->store('public/post');
+
+        if ($request->hasFile('foto1_post') && $request->file('foto1_post')->isValid()) {
+            $foto = $request->foto1_post->store('public/post');
+        } else {
+            $foto = $request->input('foto1_posts_db');
+        };
+
+        $data = $request->input('data');
+        $postModel->updatePost($id, $ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status);
+        return redirect('posts');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Post $post)
+    //Destroy função para apagar registro de postagem
+
+    public function destroy(Post $postModel, $id)
     {
-        //
+        $postModel->destroyPost($id);
+        return response()->json(['status', 'Deletado com sucesso']);
     }
 }

@@ -47,8 +47,8 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
-            <a href="index.html" class="menu-link">
+        <li class="menu-item  {{'/' == request()->path() ? 'active' : ''}}">
+            <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -56,16 +56,16 @@
 
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Postagens</span></li>
         <!-- Todas as Postagens -->
-        <li class="menu-item ">
-            <a href="tables-basic.html" class="menu-link">
+        <li class="menu-item {{'posts' == request()->path() ? 'active' : ''}}">
+            <a href="/posts" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
                 <div data-i18n="Tables">Todas as Postagens</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item {{'posts/create' == request()->path() ? 'active' : ''}}">
 
             <!-- Nova Postagem -->
-            <a href="posts.html" class="menu-link">
+            <a href="/posts/create" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Nova Postagem</div>
             </a>
@@ -73,18 +73,18 @@
 
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Publicidades</span></li>
         <!--  Publicidades -->
-        <li class="menu-item">
+        <li class="menu-item {{'publicidade' == request()->path() ? 'active' : ''}}">
 
             <!-- Todas Publicidades-->
-            <a href="publicidades.html" class="menu-link">
+            <a href="/publicidade" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
                 <div data-i18n="Basic">Todas Publicidades</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item {{'publicidade/create' == request()->path() ? 'active' : ''}}">
 
             <!-- Nova Publicidade-->
-            <a href="posts publicidades.html" class="menu-link">
+            <a href="/publicidade/create" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Nova Publicidade</div>
             </a>
@@ -101,8 +101,8 @@
                 <div data-i18n="Misc">Site</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
+                <li class="menu-item ">
+                    <a href="#" class="menu-link"  target="_blank">
                         <div>Ver site</div>
                     </a>
                 </li>
@@ -120,20 +120,20 @@
 
 
 
-        <li class="menu-item">
+        <li class="menu-item {{'account/profile' == request()->path() ? 'active' : ''}} {{'account/users' == request()->path() ? 'active' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Account Settings">Account Settings</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
+                <li class="menu-item {{'account/profile' == request()->path() ? 'active' : '' }} ">
+                    <a href="/account/profile" class="menu-link">
                         <div data-i18n="Account">Account</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
-                        <div data-i18n="Notifications">Notifications</div>
+                <li class="menu-item {{'account/users' == request()->path() ? 'active' : '' }}">
+                    <a href="/account/users" class="menu-link">
+                        <div data-i18n="Notifications">Users</div>
                     </a>
                 </li>
                 <li class="menu-item">
