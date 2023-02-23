@@ -10,6 +10,6 @@ class DashController extends Controller
     public function index(Dash $dashModel)
     {
         $dash = $dashModel->getdash();
-        return view('welcome');
+        return view('dashboard');
     }
 }

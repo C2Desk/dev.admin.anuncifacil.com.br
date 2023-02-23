@@ -54,12 +54,12 @@
             </a>
         </li>
 
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Postagens</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Notícias</span></li>
         <!-- Todas as Postagens -->
         <li class="menu-item {{'posts' == request()->path() ? 'active' : ''}}">
             <a href="/posts" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Tables">Todas as Postagens</div>
+                <div data-i18n="Tables">Todas as Notícias</div>
             </a>
         </li>
         <li class="menu-item {{'posts/create' == request()->path() ? 'active' : ''}}">
@@ -67,7 +67,7 @@
             <!-- Nova Postagem -->
             <a href="/posts/create" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Nova Postagem</div>
+                <div data-i18n="Basic">Nova Notícias</div>
             </a>
         </li>
 

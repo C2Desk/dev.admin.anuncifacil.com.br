@@ -38,6 +38,13 @@
                                         Voltar
                                     </button>-->
                                 </div>
+                                <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
+         
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                            name="status_pub" value="on" checked />
+                                    </div>
 
                                 <div class="mb-3">
                                     <label for="exampleFormControlSelect1" class="form-label">Tipo <b
@@ -69,29 +76,21 @@
 
 
                                 </div>
-
+                                <br>
 
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Upload Imagem Capa <b
                                         style="color:red">*</b></label>
                                     <input class="form-control" type="file" id="formFile" accept="image/png, image/jpeg" name="foto1_post" data-image-input />
                                     <div class="preview"><img data-image-preview style="width:120px"></div>
-                                </div>
-                                <div class="mb-3">
                                     <label for="formFileMultiple" class="form-label">Upload Imagens Conteudo</label>
                                     <input class="form-control" type="file" id="formFileMultiple" accept="image/png, image/jpeg" name="foto2_post" multiple />
                                 </div>
-                                <div class="form-check form-switch mb-2">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="status_post" value="on" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+                                <div class="mb-3">
+                                    
                                 </div>
 
-
-
-
                                 <div>
-
-
 
                                    <label for="exampleFormControlTextarea1" class="form-label" >Texto <b
                                     style="color:red">*</b></label>

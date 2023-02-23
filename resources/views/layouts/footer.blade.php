@@ -1,14 +1,14 @@
 <footer class="content-footer footer bg-footer-theme">
     <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-        <div class="mb-2 mb-md-0">
+        <div class="mb-2 mb-md-0" style="display:flex; justify-content:center">
 
-            <script>
+            <!-- <script>
                 document.write(new Date().getFullYear());
-            </script>
-            , Feito por
-            <a href="https://www.c2desk.com.br/" target="_blank" class="footer-link fw-bolder">C2 DESK</a>
+            </script> -->
+            <p> © 2023 • Desenvolvido por </p> 
+            <a href="https://www.c2desk.com.br/" target="_blank" class="footer-link fw-bolder">C2Desk.</a>
         </div>
-        <div>
+        <!-- <div>
             <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
             <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
@@ -17,7 +17,7 @@
 
             <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues" target="_blank"
                 class="footer-link me-4">Support</a>
-        </div>
+        </div> -->
     </div>
 </footer>
 
@@ -117,7 +117,7 @@
             ]
         },
         // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
-        placeholder: 'Welcome to CKEditor 5!',
+        placeholder: '',
         // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
         fontFamily: {
             options: [
@@ -184,7 +184,7 @@
             }]
         },
         ckfinder: {
-            uploadUrl: '{{ route('ckeditor.upload') . '?_token=' . csrf_token() }}'
+            uploadUrl: ''
         },
         // The "super-build" contains more premium features that require additional configuration, disable them below.
         // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
