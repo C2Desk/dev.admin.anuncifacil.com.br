@@ -140,7 +140,7 @@ class Publicidade extends Model
         $html .= '<table>
         <thead">
           <tr>
-            <th>Nº</th>
+            <th style="width:10px;">Nº</th>
             <th>Venc.</th>
             <th>Cad.</th>
             <th>Título</th>
@@ -163,16 +163,16 @@ class Publicidade extends Model
             $html .= '<td>' . $pub->data . '</td>';
             $html .= '<td>' . $pub->titulo . '</td>';;
             $html .= '<td>' . $pub->tipo . '</td>';
-            $html .= '<td>' . $pub->valor . '</td>';
+            $html .= '<td>R$ ' . number_format($pub->valor, 2, ',','.') . '</td>';
             $html .= '</tr>';
         }
 
         //Valor total final da planilha
 
         $html .= '<tr>';
-        $html .= '<td><td><td><td><td><b>Total</b></td>';
+        $html .= '<td colspan="5"><b>Total</b></td>';
         foreach ($soma as $som) {
-            $html .= '<td>R$' . $som->valor . '</td>';
+            $html .= '<td>R$ ' . number_format($som->valor, 2, ',','.') . '</td>';
         }
         $html .= '</tr>';
 

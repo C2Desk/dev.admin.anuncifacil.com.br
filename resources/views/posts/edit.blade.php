@@ -43,7 +43,7 @@
 
                                     <div class="mb-3">
                                         <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
-            
+
                                             <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
                                                 name="status_pub" value="on" checked />
                                         </div>
@@ -99,12 +99,12 @@
 
 
                                     <div>
-                                    
+
 
                                         <label for="exampleFormControlTextarea1" class="form-label">Texto <b style="color:red">*</b></label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="texto_post"
-                                            style="height: 300px !important">{{ $post->texto }} </textarea>
-                                           
+                                            style="height: 300px !important">{!! trim(strip_tags($post->texto)) !!} </textarea>
+
 
 
                                             <!--
