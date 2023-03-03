@@ -9,40 +9,29 @@
                 <div class="card">
 
                     <div class="card-body ">
-                        <div class="container text-left">
-                            <div class="row">
-                                <div class="col-sm-3">
 
-                                </div>
-
-                                <div class="col-sm-9">
-                                    <div class="row">
-                                        <div class="col-8 col-sm-6">
-                                        </div>
-                                        <div class="col-4 col-sm-6">
+                    <div class="col-sm-12">
+                           <div class="row">
                                             <form class="form" id="form">
-                                                <div class="input-group mb-3">
+                                                <div class="input-group input-group-merge">
+                                                    <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
                                                     <input type='text' id='nome' name="nome" class="form-control"
-                                                        placeholder="Digite" aria-label="Recipient's username"
-                                                        aria-describedby="basic-addon2">
+                                                        placeholder="Buscar" aria-label="Recipient's username"
+                                                        aria-describedby="basic-addon-search31">
                                                     <div class="input-group-append">
                                                         <input type="hidden" id="page" name="page" value="0">
                                                         <button class="btn btn-primary" id="btn-sub"
                                                             type="button">Pesquisar</button>
                                                     </div>
+                                                
                                                 </div>
                                             </form>
-                                        </div>
-
                                     </div>
-                                </div>
-
-                            </div>
-
-
-                        <div class="table-responsive">
-                        </div>
-
+                                
+                    </div>
+                    <br>
+                    <div class="table-responsive"></div>
+                       
                     </div>
 
                 </div>

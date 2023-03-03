@@ -40,7 +40,16 @@
                                     <!--<button type="button" class="btn btn-primary">
                                         Voltar
                                     </button>-->
+
                                 </div>
+                                <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
+
+                                        
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
+
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                            name="status_pub" value="on" checked />
+                                    </div>
 
                                 <div class="mb-3">
                                     <label for="exampleFormControlSelect1" class="form-label">Tipo <b style="color:red">*</b></label>
@@ -97,26 +106,24 @@
 
 
                                 </div>
+                                <div style="display:grid; text-align:left; align-itens:center">
+                                   <label for="exampleFormControlTextarea1" class="form-label">Anotações</label>
+                                     <textarea style="background-color:#534881; color: #ffffff " class="form-control" name="descr_post"
+                                       id="exampleFormControlTextarea1" rows="3"></textarea>
+                                 </div><br>
 
                                 <div>
-                                    <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Conteudo</label>
                                     <textarea name="texto_pub" id="editor" rows="3">{{ $publi->texto }}</textarea>
                                 </div>
 
-                                <div class="form-check form-switch mb-3">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="status_pub" value="on" checked />
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
-                                </div>
+                                
+                                <div class="demo-inline-spacing" style="display: flex; justify-content: right"> 
+                                                <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                                                <button type="submit" class="btn btn-success">Enviar</button>    
+                                            </div>
 
 
-
-
-
-
-                                <div class="demo-inline-spacing" style="display: flex; justify-content: right">
-
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
-                                </div>
                             </div>
                         </div>
                     </div>

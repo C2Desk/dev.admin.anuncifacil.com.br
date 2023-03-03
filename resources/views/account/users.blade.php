@@ -87,7 +87,7 @@
 
 
             $.ajax({
-                url: "{{ route('posts.list') }}",
+                url: "{{ route('account.list') }}",
                 method: 'GET',
                 data: dados
             }).done(function(data) {

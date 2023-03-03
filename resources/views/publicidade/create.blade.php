@@ -112,32 +112,24 @@
                                             <input type="number" class="form-control valor" id="exampleFormControlInput1"
                                                 placeholder="Insira valor" name="valor_pub" />
                                         </div>
-                                        
-
-                                    </div>
-                                    <br>
-
-
-                                    <div style="display: flex; gap: 40px">
-                                    <div class="col-md-5">
-                                            <label for="exampleFormControlInput1" class="form-label">E-mail <b
+                                        <div class="col-sm-2 col-md-10 col-lg-3 mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">E-mail <b
                                                     style="color:red">*</b></label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
                                                 placeholder="email@domain" name="email_pub" required />
                                         </div>
-                                        
-                                        
-                                        <div class="col-md-5">
-                                            <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+
+                                        <div class="col-sm-2 col-md-10 col-lg-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Telefone</label>
                                             <input type="text" class="form-control telefone"
                                                 id="exampleFormControlInput1" placeholder="(00) 0 0000-0000"
                                                 name="telefone_pub" />
                                         </div>
-                                   
-                                    </div>
-                                   
+                                        
 
-                                    <br>
+                                    </div>
+                                    
+
 
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Upload foto publicidade <b
@@ -161,6 +153,11 @@
                                                 <textarea style="background-color:#534881; color: #ffffff " class="form-control" name="descr_post"
                                                     id="editor" rows="3"></textarea>
                                             </div>
+                                            <div class="demo-inline-spacing" style="display: flex; justify-content: right"> 
+                                                <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                                                <button type="submit" class="btn btn-success">Enviar</button>    
+                                            </div>
+                                            
                                         
                                     </div>
 

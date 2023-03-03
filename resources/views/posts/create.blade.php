@@ -56,6 +56,55 @@
                                         <option value="3">Nota de Falecimento</option>
                                     </select>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3 col-md-3 col-lg-8 mb-3">
+                                        <label for="exampleFormControlSelect1" class="form-label">Categoria <b
+                                            style="color:red">*</b></label>
+                                        <select class="form-select" id="exampleFormControlSelect1" name="tipo_post" aria-label="Default select example">
+                                            <option value="" selected>Selecione uma opção</option>
+                                            <option value="Notícias">Notícias</option>
+                                            <option value="2">Destaques</option>
+                                            <option value="3">Nota de Falecimento</option>
+                                        </select>
+                                        
+                                    </div>
+
+                                    <div class="col-sm-3 col-md-3 col-lg-4 mb-3">
+                                        
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalToggle">
+                                            Nova Categoria
+                                            </button>
+
+                                            <!-- Modal Categoria-->
+                                            <div class="modal fade" id="modalToggle"aria-labelledby="modalToggleLabel" tabindex="-1"
+                                                style="display: none"aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modalToggleLabel">Modal 1</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">Show a second modal and hide this one with the button below.</div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-primary" data-bs-target="#modalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" >
+                                                    Open second modal
+                                                    </button>
+                                                </div>
+
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    
+                                
+                                
+                      
+                      
+
+
+                                
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Título <b
                                         style="color:red">*</b></label>
@@ -101,10 +150,14 @@
 
 
                                 <div class="demo-inline-spacing" style="display: flex; justify-content: right">
-
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
-                                </div>
+                                                <button type="submit" class="btn btn-danger">Deletar</button>
+                                                <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+                                                <button type="submit" class="btn btn-success">Enviar</button>    
+                                            </div>
                             </div>
+
+
+                            
                         </div>
                     </div>
                 </div>
@@ -113,3 +166,4 @@
 
 
 @endsection
+

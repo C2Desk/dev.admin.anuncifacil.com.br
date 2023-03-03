@@ -6,7 +6,7 @@
             <th>Categoria</th>
             <th>Status</th>
             <th>Enviado</th>
-            <th>Fotos</th>
+            <!-- <th>Fotos</th> -->
             <th>Ações</th>
         </tr>
     </thead>
@@ -25,7 +25,7 @@
             @endif
             <td>{{$publi->data}}</td>
 
-            <td>
+            <!-- <td>
                 <ul class="list-unstyled Imagem-list m-0 avatar-group d-flex align-items-center">
                     <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
                         <img src="{{Storage::url($publi->foto)}}" alt="Avatar" class="rounded-circle" />
@@ -37,7 +37,7 @@
                         <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
                     </li>
                 </ul>
-            </td>
+            </td> -->
             <td>
                 <div class="dropdown">
                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -62,7 +62,7 @@
             <th>Categoria</th>
             <th>Status</th>
             <th>Enviado</th>
-            <th>Fotos</th>
+            <!-- <th>Fotos</th> -->
             <th>Ações</th>
         </tr>
     </tfoot>

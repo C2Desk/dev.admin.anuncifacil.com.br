@@ -4,9 +4,9 @@
             <th>Titulo</th>
             <th>Categoria</th>
             <th>Data</th>
-            <th>Destaque</th>
+            <!-- <th>Destaque</th> -->
             <th>Status</th>
-            <th>Fotos</th>
+            <!-- <th>Fotos</th> -->
             <th>Ações</th>
         </tr>
     </thead>
@@ -18,14 +18,16 @@
                 <td>{{ $post->titulo }}</td>
                 <th>{{ $post->tipo }}</th>
                 <td>{{ $post->data }}</td>
-                <td>{{ $post->destaque }}</td>
+                <!-- <td>{{ $post->destaque }}</td> -->
                 @if ($post->status == 'on')
-                    <td><span class="badge bg-label-success me-1">Habilitado</span></td>
+                    <td><span class="badge bg-label-success me-1">Habilitado</span>
+                </td>
+                    
                 @else
                     <td><span class="badge bg-label-primary me-1">Desabilitado</span></td>
                 @endif
 
-                <td>
+                <!-- <td>
                     <ul
                         class="list-unstyled Imagem-list m-0 avatar-group d-flex align-items-center">
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
@@ -47,7 +49,7 @@
                                 class="rounded-circle" />
                         </li>
                     </ul>
-                </td>
+                </td> -->
                 <td>
                     <div class="dropdown">
                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -72,9 +74,9 @@
             <th>Titulo</th>
             <th>Categoria</th>
             <th>Data</th>
-            <th>Destaque</th>
+            <!-- <th>Destaque</th> -->
             <th>Status</th>
-            <th>Fotos</th>
+            <!-- <th>Fotos</th> -->
             <th>Ações</th>
         </tr>
     </tfoot>

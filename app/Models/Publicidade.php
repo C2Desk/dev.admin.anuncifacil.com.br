@@ -103,7 +103,8 @@ class Publicidade extends Model
             <body>';
 
         //Header data
-        $html .= '<h5 style="display:flex; text-align:center;">' . date('d/m/Y H:i') . ' - Anuncifacil</h5>';
+        // $html .= '<h5 style="display:flex; text-align:center;">' . date('d/m/Y H:i') . ' - Anuncifacil</h5>';
+        $html .= '<h5 style="display:flex; text-align:center;">' . date('d/m/Y') . ' - Anuncifacil</h5>';
 
         //Style do PDF
         $html .= '<style>
@@ -117,18 +118,18 @@ class Publicidade extends Model
             }
           }
           th, td {
-            padding: 15px;
+            padding: 5px;
         }
         table{
             width:100%;
         }
         td {
-            width: 25px;
-            font-size:12px;
+            width: 30px;
+            font-size:14px;
         }
         thead tr        {
             height:60px;
-            background:#006a89;
+            background:#042a4a;
             font-size:16px;
             color:white;
           }
@@ -169,7 +170,7 @@ class Publicidade extends Model
         //Valor total final da planilha
 
         $html .= '<tr>';
-        $html .= '<td><b>Total</b></td>';
+        $html .= '<td><td><td><td><td><b>Total</b></td>';
         foreach ($soma as $som) {
             $html .= '<td>R$' . $som->valor . '</td>';
         }

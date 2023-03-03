@@ -42,6 +42,12 @@
                                     </div>
 
                                     <div class="mb-3">
+                                        <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
+            
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                                name="status_pub" value="on" checked />
+                                        </div>
+
                                         <label for="exampleFormControlSelect1" class="form-label">Tipo <b style="color:red">*</b></label>
                                         <select class="form-select" id="exampleFormControlSelect1" name="tipo_post"
                                             aria-label="Default select example">
@@ -93,10 +99,14 @@
 
 
                                     <div>
+                                    
 
                                         <label for="exampleFormControlTextarea1" class="form-label">Texto <b style="color:red">*</b></label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="texto_post"
-                                            style="height: 300px !important">{{ $post->texto }}</textarea>
+                                            style="height: 300px !important">{{ $post->texto }} </textarea>
+                                           
+
+
                                             <!--
                                         <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
                                         <textarea style="background-color:#534881; color: #ffffff;height: 200px" class="form-control" name="descr_post"
