@@ -118,13 +118,13 @@ class Publicidade extends Model
             }
           }
           th, td {
-            padding: 5px;
+            padding: 1px;
         }
         table{
             width:100%;
         }
         td {
-            width: 30px;
+            width: 25px;
             font-size:14px;
         }
         thead tr        {

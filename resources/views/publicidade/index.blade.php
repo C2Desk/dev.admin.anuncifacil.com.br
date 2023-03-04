@@ -22,24 +22,24 @@
                                                         <button class="btn btn-primary" id="btn-sub"
                                                             type="button">Pesquisar</button>
                                                     </div>
-                                                
+
                                                 </div>
                                             </form>
                                     </div>
-                                
+
                     </div>
                     <br>
                             <div class="table-responsive"> </div>
                             <div class="demo-inline-spacing" style="display: flex; justify-content: right">
                               <a href="{{ route('publicidade.pdf') }}" type="button" class="btn btn-dark">Imprimir</a>
-                                                   
+
                               </div>
-                            
+
                         </div>
                     </div>
 
                 </div>
-                
+
             </div>
         </div>
 

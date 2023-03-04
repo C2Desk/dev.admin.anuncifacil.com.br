@@ -40,13 +40,13 @@
                                         Voltar
                                     </button>-->
                                     </div>
+                                    <div class="form-check form-switch mb-2" style="justify-content:right; display:flex; gap:10px ">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                            name="status_post" value="on"  {{'on' ==  $post->status  ? 'checked' : ''}} />
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Destaque</label>
+                                    </div>
 
                                     <div class="mb-3">
-                                        <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
-
-                                            <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
-                                                name="status_pub" value="on" checked />
-                                        </div>
 
                                         <label for="exampleFormControlSelect1" class="form-label">Tipo <b style="color:red">*</b></label>
                                         <select class="form-select" id="exampleFormControlSelect1" name="tipo_post"
@@ -91,11 +91,11 @@
                                         <input class="form-control" type="file" id="formFileMultiple"
                                             accept="image/png, image/jpeg" name="foto2_post" multiple/>
                                     </div>
-                                    <div class="form-check form-switch mb-2">
+                                    <!-- <div class="form-check form-switch mb-2">
                                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
                                             name="status_post" value="on"  {{'on' ==  $post->status  ? 'checked' : ''}} />
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
-                                    </div>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Destaque</label>
+                                    </div> -->
 
 
                                     <div>

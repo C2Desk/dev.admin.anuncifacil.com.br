@@ -24,10 +24,10 @@ class PostsController extends Controller
 
     public function paginacao()
     {
-        $id = Post::when(request('nome') != null, function ($query) {
+        $posts = Post::when(request('nome') != null, function ($query) {
             return $query->where('titulo', 'like', '%' . request('nome') . '%');
-        })->orderBy('id', 'DESC')->paginate(5);
-        return view('posts.list')->with('posts', $id);
+        })->orderBy('id', 'DESC')->paginate(10);
+        return view('posts.list')->with('posts', $posts);
     }
 
     //Search: Função de pesquisa dento de postagens na tela de paginação
