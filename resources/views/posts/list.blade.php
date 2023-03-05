@@ -14,10 +14,12 @@
         </thead>
         <tbody>
 
+            <form action="{{route('posts.destaque')}}" method="PUT">
+                @csrf
             @foreach ($posts as $post)
                 <tr>
                     <input type="hidden" class="delete" value="{{ $post->id }}">
-                    <td>{{ Storage::url($post->foto) }}</td>
+                    <td><img src="{{ Storage::url($post->foto) }}"style="width:100px; height 100px" /></td>
                     <td>{{ $post->titulo }}</td>
                     <th>{{ $post->tipo }}</th>
                     <td>{{ $post->data }}</td>
@@ -33,71 +35,33 @@
                         <td><span class="badge bg-label-primary me-1">Desabilitado</span></td>
                     @endif -->
 
-
-                    @if ($post->status == 'on')
                         <td>
-                            <span class="form-check form-switch mb-3">
-                                <label class="form-check-label" for="flexSwitchCheckChecked">On</label>
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
-                                name="status_post" value="on"  {{'on' ==  $post->status  ? 'checked' : ''}} />
-                            </span>
-                        </td>
+                                <span class="form-check form-switch mb-3">
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">{{'on' ==  $post->status  ? 'On' : 'Off'}}</label>
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                    name="status_post"   {{'on' ==  $post->status  ? 'checked' : ''}} onclick="statusDestaque(this, {{$post->id}})"/>
+                                </span>
+                            </td>
 
-                    @else
-                    <td>
-                            <span class="form-check form-switch mb-3">
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Off</label>
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
-                                name="status_post" value="off"  {{'off' ==  $post->status  ?  : ''}} />
-                            </span>
-                        </td>
-
-                    @endif
-
-
-
-
-                    <!-- <td>
-                        <ul
-                            class="list-unstyled Imagem-list m-0 avatar-group d-flex align-items-center">
-                            <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                data-bs-placement="top" class="avatar avatar-xs pull-up"
-                                title="Lilian Fuller">
-                                <img src="{{ Storage::url($post->foto) }}" alt="Avatar"
-                                    class="rounded-circle" />
-                            </li>
-                            <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                data-bs-placement="top" class="avatar avatar-xs pull-up"
-                                title="Sophia Wilkerson">
-                                <img src="../assets/img/avatars/6.png" alt="Avatar"
-                                    class="rounded-circle" />
-                            </li>
-                            <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
-                                data-bs-placement="top" class="avatar avatar-xs pull-up"
-                                title="Christina Parker">
-                                <img src="../assets/img/avatars/7.png" alt="Avatar"
-                                    class="rounded-circle" />
-                            </li>
-                        </ul>
-                    </td> -->
-                    <td>
-                        <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown">
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/posts/edit/{{ $post->id }}"><i
-                                        class="bx bx-edit-alt me-1"></i>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                    data-bs-toggle="dropdown">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/posts/edit/{{ $post->id }}"><i
+                                    class="bx bx-edit-alt me-1"></i>
                                     Edit</a>
-                                <a class="dropdown-item deletebtn" href="#"><i
-                                        class="bx bx-trash me-1"></i>
+                                    <a class="dropdown-item deletebtn" href="#"><i
+                                    class="bx bx-trash me-1"></i>
                                     Delete</a>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
             @endforeach
+        </form>
 
 
         </tbody>

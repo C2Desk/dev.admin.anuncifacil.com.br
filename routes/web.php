@@ -37,11 +37,13 @@ Route::get('/posts/list', [PostsController::class, 'paginacao'])->name('posts.li
 
 
 Route::get('/posts/create', [PostsController::class, 'create']);
+
 Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save');
 
 /*UPDATE*/
 Route::get('/posts/edit/{id}', [PostsController::class, 'edit'])->name('posts.edit');
-Route::put('/posts/{id}', [PostsController::class, 'update'])->name('posts.update');
+Route::put('/posts/update', [PostsController::class, 'update'])->name('posts.update');
+Route::put('/posts/destaque', [PostsController::class, 'updateDestaque'])->name('posts.destaque');
 
 
 Route::delete('/posts/delete/{id}',[PostsController::class, 'destroy'])->name('posts.destroy');
@@ -62,6 +64,7 @@ Route::get('/publicidade/edit/{id}', [PubController::class, 'edit'])->name('publ
 Route::put('/publicidade/{id}', [PubController::class, 'update'])->name('publicidade.update');
 
 Route::delete('/publicidade/delete/{id}',[PubController::class, 'destroy'])->name('publicidade.destroy');
+
 
 Route::post('/ckeditor',[PubController::class, 'uploadimage'])->name('ckeditor.upload');
 

@@ -49,7 +49,7 @@ $(document).ready(function () {
         var delete_id = $(this).closest('tr').find('.delete').val();
         swal({
             title: "Você tem certeza?",
-            text: "uma vez excluído, você não poderá recuperar este arquivo!",
+            text: "Uma vez excluído, você não poderá recuperar este arquivo!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -82,4 +82,40 @@ $(document).ready(function () {
                 }
             });
     });
+
+
+    // $('.form-check-input').click(function (e) {
+    //     e.preventDefault();
+    //     // var v = $('.form-check-input').val();
+    //     console.log("chamou uma funçao");
+
+    //  });
+
+
+
 });
+
+
+function statusDestaque (input, destaque_id){
+    console.log(input.checked);
+    var data = {
+        "_token": $('input[name="_token"]').val(),
+        "id": destaque_id,
+        "status": input.checked,
+    };
+    console.log(data._token);
+    $.ajax({
+        type: "PUT",
+        url: "/posts/destaque",
+        data: data,
+        success: function (data)
+        {
+            console.log(data)
+        }, error: function(data){
+            var erros = $.parseJSON(data.responseText);
+            console.log(erros);
+            }
+
+
+    });
+}

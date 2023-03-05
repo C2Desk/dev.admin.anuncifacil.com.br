@@ -114,23 +114,28 @@ class PostsController extends Controller
         ]);
     }
 
-    //Update: atualizar registro de postagem
+    public function updateDestaque(Request $request, Post $postModel)
+    {
+        $status = ($request->input('status') == 'true') ? 'on' : 'off';
+        $postModel->updateDestaque($request->input('id'), $status);
 
-    public function update(Request $request, Post $postModel, $id)
+        return response()->json(['status', 'Destaque alterado com sucesso']);
+
+    }
+
+    //Update: atualizar registro de postagem
+    public function update(Request $request, Post $postModel)
     {
         $mensagens = [
 
             //Tipo
-
             'tipo_post.required' => 'Selecione um tipo',
 
             //titulo
-
             'titulo_post.required' => 'O campo titulo é obrigatório',
             'titulo_post.min' => 'O titulo deve ter pelo menos 5 caracteres.',
 
             //texto
-
             'texto_post.required' => 'O campo texto é obrigatório',
             'texto_post.min' => 'O campo texto deve ter pelo menos 5 caracteres.',
 
@@ -179,3 +184,4 @@ class PostsController extends Controller
         return response()->json(['status', 'Deletado com sucesso']);
     }
 }
+

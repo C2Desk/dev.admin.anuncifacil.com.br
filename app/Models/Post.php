@@ -23,7 +23,7 @@ class Post extends Model
 
     public function savePost($ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status, $data = null)
     {
-        $dataPost = ($data == null) ? date("Y:m:d") : $data;
+        $dataPost = ($data == null) ? date("Y-m-d") : $data;
 
         try {
             $sql = "INSERT INTO anuncifacil.posts
@@ -72,6 +72,17 @@ class Post extends Model
             return true;
         } catch (\Throwable $th) {
             throw new Exception("Erro ao inserir os dados do post no banco de dados" . $th);
+        }
+    }
+
+    public function updateDestaque($id, $status)
+    {
+        try {
+            DB::update("UPDATE posts set status = '{$status}' WHERE id = '{$id}'");
+
+            return true;
+        } catch (\Throwable $th) {
+            throw new Exception("Erro ao alterar os dados" . $th);
         }
     }
 }
