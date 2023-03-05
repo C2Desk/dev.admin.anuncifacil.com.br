@@ -33,26 +33,7 @@
                     <!-- <div class="table-responsive d-none d-md-block"></div>
                  -->
                  <div class="table-responsive"></div>
-                 <div>
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                            <span class="page-link">Anterior</span>
-                            </li>
-                            <li class="page-item active">
-                            <span class="page-link">
-                                1
-                                <span class="sr-only"></span>
-                            </span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                            <a class="page-link" href="#">Próximo</a>
-                            </li>
-                        </ul>
-                </nav>
-        </div>
+
                     </div>
 
                 </div>

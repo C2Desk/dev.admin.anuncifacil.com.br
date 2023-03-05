@@ -36,8 +36,8 @@
                     @endif -->
 
                         <td>
-                                <span class="form-check form-switch mb-3">
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">{{'on' ==  $post->status  ? 'On' : 'Off'}}</label>
+                                <span class="form-check form-switch mb-3"  onClick="window.location.reload()">
+                                    <label class="form-check-label" for="flexSwitchCheckChecked" >{{'on' ==  $post->status  ? 'On' : 'Off'}}</label>
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
                                     name="status_post"   {{'on' ==  $post->status  ? 'checked' : ''}} onclick="statusDestaque(this, {{$post->id}})"/>
                                 </span>
@@ -81,17 +81,23 @@
 
 <div class="row d-block d-md-none">
 @foreach ($posts as $post)
-    <div class="col-12 mb-2">
-        <div><h5>Título</h5></div>
+    <div class="col-12 mb-3">
+        <div><h5>Post</h5></div>
         <div>{{ $post->titulo }}</div>
     </div>
-    <div class="col-12 mb-3">
-        <div><span><b>Categoria</b></span></div>
-        <div class="mb-3">{{ $post->tipo }}</div>
+    <div class="col-12 mb-4">
+        <!-- <div><span><b>Categoria</b></span></div>
+        <div class="mb-3">{{ $post->tipo }}</div> -->
         <div class="row">
             <div class="btn-group" data-toggle="buttons">
-                <a href="" class="btn btn-sm btn-warning">Editar</a>
-                <a href="" class="btn btn-sm btn-danger">Deletar</a>
+                <a href="" class="btn btn-sm btn-warning">
+                    <i class="bx bx-edit-alt me-1"> </i>
+                    Editar
+                </a>
+                <a href="" class="btn btn-sm btn-danger ">
+                    <i class="bx bx-trash me-1"></i>
+                    Deletar
+                </a>
             </div>
         </div>
     </div>

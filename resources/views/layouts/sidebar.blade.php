@@ -54,21 +54,48 @@
             </a>
         </li>
 
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Notícias</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Posts</span></li>
         <!-- Todas as Postagens -->
         <li class="menu-item {{'posts' == request()->path() ? 'active' : ''}}">
             <a href="/posts" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Tables">Todas as Notícias</div>
+                <!-- <i class="menu-icon tf-icons bx bx-table"></i> -->
+                <i class="menu-icon tf-icons bx bx-list-ul"></i>
+                <div data-i18n="Tables">Todas as Postagens</div>
             </a>
         </li>
+
+
         <li class="menu-item {{'posts/create' == request()->path() ? 'active' : ''}}">
 
             <!-- Nova Postagem -->
             <a href="/posts/create" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Nova Notícias</div>
+                <!-- <i class="menu-icon tf-icons bx bx-collection"></i> -->
+                <i class='menu-icon tf-icons bx bx-plus-circle'></i>
+                <div data-i18n="Basic">Nova Postagem</div>
+
             </a>
+        </li>
+
+        <li class="menu-item ">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <!-- <i class='menu-icon tf-icons bx bx-plus-circle'></i> -->
+            <i class="menu-icon tf-icons  bx bx-send"></i>
+
+                <div data-i18n="Account Settings">Social Posts</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item ">
+                    <a href="#" class="menu-link">
+                        <div data-i18n="WhatsApp">WhatsApp</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Facebook">Facebook</div>
+                    </a>
+                </li>
+
+            </ul>
         </li>
 
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Publicidades</span></li>
@@ -85,7 +112,8 @@
 
             <!-- Nova Publicidade-->
             <a href="/publicidade/create" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <!-- <i class="menu-icon tf-icons bx bx-collection"></i> -->
+                <i class='menu-icon tf-icons bx bx-plus-circle'></i>
                 <div data-i18n="Basic">Nova Publicidade</div>
             </a>
         </li>
@@ -97,12 +125,13 @@
         </li>
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <!-- <i class="menu-icon tf-icons bx bx-cube-alt"></i> -->
+                <i class='menu-icon tf-icons bx bx-link-external'></i>
                 <div data-i18n="Misc">Site</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item ">
-                    <a href="#" class="menu-link"  target="_blank">
+                    <a href="https://anuncifacilnews.com.br/" class="menu-link">
                         <div>Ver site</div>
                     </a>
                 </li>
@@ -122,23 +151,19 @@
 
         <li class="menu-item {{'account/profile' == request()->path() ? 'active' : ''}} {{'account/users' == request()->path() ? 'active' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
+                <!-- <i class="menu-icon tf-icons bx bx-dock-top"></i> -->
+                <i class="menu-icon tf-icons bx bx-cog"></i>
+                <div data-i18n="Account Settings">Conta</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item {{'account/profile' == request()->path() ? 'active' : '' }} ">
                     <a href="/account/profile" class="menu-link">
-                        <div data-i18n="Account">Account</div>
+                        <div data-i18n="Account">Conta</div>
                     </a>
                 </li>
                 <li class="menu-item {{'account/users' == request()->path() ? 'active' : '' }}">
                     <a href="/account/users" class="menu-link">
-                        <div data-i18n="Notifications">Users</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="pages-account-settings-connections.html" class="menu-link">
-                        <div data-i18n="Connections">Connections</div>
+                        <div data-i18n="Notifications">Usuários</div>
                     </a>
                 </li>
             </ul>
@@ -148,14 +173,16 @@
         <!-- Misc -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Outros Links</span></li>
         <li class="menu-item">
-            <a href="#" target="_blank" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-support"></i>
+            <a href="https://business.facebook.com/" target="_blank" class="menu-link">
+                <!-- <i class="menu-icon tf-icons bx bx-support"></i> -->
+                <i class="menu-icon tf-icons bx bxl-facebook"></i>
                 <div data-i18n="Support">Facebook Business</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="#" target="_blank" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-file"></i>
+            <a href="https://blog.google/products/adsense/" target="_blank" class="menu-link">
+                <!-- <i class="menu-icon tf-icons bx bx-file"></i> -->
+                <i class="menu-icon tf-icons bx bxl-google"></i>
                 <div data-i18n="Documentation">Google Ads</div>
             </a>
         </li>

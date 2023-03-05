@@ -12,7 +12,7 @@
 
                             <div class="nav-item d-flex align-items-center">
                                 <i class="bx bx-search fs-4 lh-0"></i>
-                                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search..." />
+                                <input type="text" class="form-control border-0 shadow-none" placeholder="Buscar..." aria-label="Buscar..." />
                             </div>
 
                         </div>
@@ -39,7 +39,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">John Doe</span>
+                                                    <span class="fw-semibold d-block">User</span>
                                                     <small class="text-muted">Admin</small>
                                                 </div>
                                             </div>
@@ -57,7 +57,7 @@
                                     <li>
                                         <a class="dropdown-item" href="/account/users">
                                             <i class="bx bx-link-alt me-1"></i>
-                                            <span class="align-middle">Users</span>
+                                            <span class="align-middle">Usuários</span>
                                         </a>
                                     </li>
 

@@ -1,3 +1,5 @@
+<div class="row d-none d-md-block">
+
 <table class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
@@ -30,12 +32,7 @@
                     <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Lilian Fuller">
                         <img src="{{Storage::url($publi->foto)}}" alt="Avatar" class="rounded-circle" />
                     </li>
-                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                        <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
-                    </li>
-                    <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="Christina Parker">
-                        <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
-                    </li>
+
                 </ul>
             </td> -->
             <td>
@@ -62,15 +59,50 @@
             <th>Categoria</th>
             <th>Status</th>
             <th>Enviado</th>
-            <!-- <th>Fotos</th> -->
+            <th>Fotos</th>
             <th>Ações</th>
-        </tr>
+       </tr>
     </tfoot>
 </table>
 </div>
+
+<div class="row d-block d-md-none">
+@foreach ($publicidade as $publi)
+    <div class="col-12 mb-3">
+        <div><h5>Publicidade</h5></div>
+        <div>{{ $publi->titulo }}</div>
+    </div>
+    <div class="col-12 mb-4">
+
+        <div class="row">
+            <div class="btn-group" data-toggle="buttons">
+                <a class="dropdown-item btn btn-sm btn-warning" href="/publicidade/edit/{{$publi->id}}">
+                    <i class="bx bx-edit-alt me-1"> </i>
+                    Editar
+                </a>
+                <a class="dropdown-item deletebtnPub btn btn-sm btn-danger" href="#">
+                    <i class="bx bx-trash me-1"></i>
+                    Delete
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+<hr>
+@endforeach
+</div>
+
+
+
+
 <div class="py-4">
 {{$publicidade->links()}}
 </div>
+
+</div>
+
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script src="{{ asset('/assets/vendor/alert/sweet.js') }}"></script>
