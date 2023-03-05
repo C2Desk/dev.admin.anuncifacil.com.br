@@ -6381,9 +6381,12 @@ label.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #71dd37;
-  border-color: #71dd37;
+  background-color: #037926;
+  border-color: #037926;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(113, 221, 55, 0.4);
+  /* background-color: #71dd37;
+  border-color: #71dd37;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(113, 221, 55, 0.4); */
 }
 .btn-success:hover {
   color: #fff;
@@ -6615,9 +6618,12 @@ label.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #ff3e1d;
-  border-color: #ff3e1d;
+  background-color: #c50423;
+  border-color: #c50423;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 62, 29, 0.4);
+  /* background-color: #ff3e1d;
+  border-color: #ff3e1d;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 62, 29, 0.4); */
 }
 .btn-danger:hover {
   color: #fff;

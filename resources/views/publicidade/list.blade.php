@@ -76,7 +76,7 @@
 
         <div class="row">
             <div class="btn-group" data-toggle="buttons">
-                <a class="dropdown-item btn btn-sm btn-warning" href="/publicidade/edit/{{$publi->id}}">
+                <a class="dropdown-item btn btn-sm btn-secondary" href="/publicidade/edit/{{$publi->id}}">
                     <i class="bx bx-edit-alt me-1"> </i>
                     Editar
                 </a>

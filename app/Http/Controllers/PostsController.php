@@ -47,6 +47,13 @@ class PostsController extends Controller
     {
         return view('posts/create');
     }
+    //Create: mandar para a pagina de criação de nova postagem SOCIAL.
+
+    public function social()
+    {
+        return view('posts/social');
+    }
+
 
     //Store: manda as informações do formulario pra model de postagem.
 

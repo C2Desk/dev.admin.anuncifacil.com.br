@@ -37,6 +37,7 @@ Route::get('/posts/list', [PostsController::class, 'paginacao'])->name('posts.li
 
 
 Route::get('/posts/create', [PostsController::class, 'create']);
+Route::get('/posts/social', [PostsController::class, 'social']);
 
 Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save');
 

@@ -90,7 +90,7 @@
         <div class="mb-3">{{ $post->tipo }}</div> -->
         <div class="row">
             <div class="btn-group" data-toggle="buttons">
-                <a href="" class="btn btn-sm btn-warning">
+                <a href="" class="btn btn-sm btn-secondary">
                     <i class="bx bx-edit-alt me-1"> </i>
                     Editar
                 </a>
