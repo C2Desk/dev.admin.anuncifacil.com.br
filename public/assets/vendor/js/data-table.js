@@ -2,12 +2,12 @@
 jQuery(document).ready(function($) {
     'use strict';
 
-    if ($("table.first").length) {
+    /*if ($("table.first").length) {
 
         $(document).ready(function() {
             $('table.first').DataTable();
         });
-    }
+    }*/
 
     /* Calender jQuery **/
 

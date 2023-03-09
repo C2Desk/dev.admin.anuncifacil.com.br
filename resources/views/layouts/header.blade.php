@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard</title>
 
     <meta name="description" content="" />
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{asset('/assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{asset('/assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{asset('/assets/css/demo.css')}}" />
-    
+
 
     <!--TABLE CSS-->
     <link rel="stylesheet" href="{{asset('/assets/vendor/datatables/css/dataTables.bootstrap4.css')}}">
@@ -33,7 +33,9 @@
     <link rel="stylesheet" href="{{asset('/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
 
     <link rel="stylesheet" href="{{asset('/assets/vendor/libs/apex-charts/apex-charts.css')}}" />
-
+    <script src="{{asset('/assets/vendor/jquery/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('/assets/vendor/mask/jquery.mask.min.js')}}"></script>
+    <script src="{{asset('/assets/vendor/mask/mascara.js')}}"></script>
     <!-- Page CSS -->
 
     <!-- Helpers -->
@@ -42,7 +44,8 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('/assets/js/config.js')}}"></script>
-    
+
+
 </head>
 
 <body>
