@@ -19,7 +19,7 @@
             @foreach ($posts as $post)
                 <tr>
                     <input type="hidden" class="delete" value="{{ $post->id }}" >
-                    <div>{{ Storage::url($post->foto) }}</div>
+                    <!-- <div>{{ Storage::url($post->foto) }}</div> -->
                     <td><img src="{{ Storage::url($post->foto) }}"style="width:100px; height 100px" /></td>
                     <td>{{ $post->titulo }}</td>
                     <th>{{ $post->tipo }}</th>
