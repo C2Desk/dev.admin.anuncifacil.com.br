@@ -8,14 +8,14 @@
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                         <!-- Search -->
 
-                        <div class="navbar-nav align-items-center">
+                        <!-- <div class="navbar-nav align-items-center">
 
                             <div class="nav-item d-flex align-items-center">
                                 <i class="bx bx-search fs-4 lh-0"></i>
                                 <input type="text" class="form-control border-0 shadow-none" placeholder="Buscar..." aria-label="Buscar..." />
                             </div>
 
-                        </div>
+                        </div> -->
                         <!-- /Search -->
 
 
@@ -74,10 +74,17 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="auth-login-basic.html">
-                                            <i class="bx bx-power-off me-2"></i>
-                                            <span class="align-middle">Log Out</span>
-                                        </a>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <x-dropdown-link class="dropdown-item" :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                                <i class="bx bx-power-off me-2"></i>
+                                                <span class="align-middle">Log Out</span>
+                                            </x-dropdown-link>
+                                        </form>
+
+
                                     </li>
                                 </ul>
                             </li>

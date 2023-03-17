@@ -44,17 +44,18 @@ class Post extends Model
 
     public function edit($id)
     {
-        $posts = DB::table('posts')->select('*')->where('id', $id)->paginate(10);
-        return $posts;
+        $post = DB::selectOne("Select * from posts where id = {$id}");
+        return $post;
     }
 
     //Update de postagem
 
     public function updatePost($id, $ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status, $data = null)
     {
-        $dataPost = ($data == null) ? date("Y:m:d") : $data;
+        $dataPost = ($data == null) ? date("Y-m-d") : $data;
+
         try {
-            $sql = "UPDATE anuncifacil.posts SET ip = 'asd', no_id = 10, data =  '2009-07-21', hora = '00:00:00', titulo = '$titulo', sub_titulo = '$sub_titulo',foto = '$foto',status = '$status' WHERE id = $id;";
+            $sql = "UPDATE posts SET ip = 'asd', no_id = 10, `data` = '{$dataPost}', hora = '" . date("H:i:s") . "', titulo = '{$titulo}', sub_titulo = '{$sub_titulo}',foto = '{$foto}',status = '{$status}' WHERE id = {$id}";
 
             DB::update($sql);
 

@@ -2,13 +2,11 @@
 
 
 @section('content')
-    @foreach ($posts as $post)
-        <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('posts.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @method('put')
+
             <div class="container-xxl flex-grow-1 container-p-y">
                 <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Posts /</span> Edit Postagem</h4>
-
 
                 <div class="row">
                     @if ($errors->any())
@@ -29,13 +27,7 @@
                         <div class="col-md-6" style="width: 100% !important; height: 100% !important">
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    <div class="demo-inline-spacing"
-                                        style="
-                      display: flex;
-                      justify-content: left;
-                      margin-bottom: 10px;
-                      margin-top: -10px;
-                    ">
+                                    <div class="demo-inline-spacing" style="display: flex; justify-content: left; margin-bottom: 10px; margin-top: -10px;">
                                         <!--<button type="button" class="btn btn-primary">
                                         Voltar
                                     </button>-->
@@ -52,9 +44,31 @@
                                         <select class="form-select" id="exampleFormControlSelect1" name="tipo_post"
                                             aria-label="Default select example">
                                             <option value = "">Selecione uma opção</option>
-                                            <option value="1" {{'1' ==  $post->tipo  ? 'selected' : ''}}>Notícias</option>
-                                            <option value="2">Destaques</option>
-                                            <option value="3">Nota de Falecimento</option>
+                                            <option value="Bombeiros"             {{"Bombeiros" == $post->tipo ? 'selected' : ''}} >Bombeiros</option>
+                                            <option value="Catedral Cristo Rei"   {{"Catedral Cristo Rei" == $post->tipo ? 'selected' : ''}} >Catedral Cristo Rei</option>
+                                            <option value="Classificados"         {{"Classificados" == $post->tipo ? 'selected' : ''}} >Classificados</option>
+                                            <option value="Destaque Lateral"      {{"Destaque Lateral" == $post->tipo ? 'selected' : ''}} >Destaque Lateral</option>
+                                            <option value="Diverção"              {{"Diverção" == $post->tipo ? 'selected' : ''}} >Diverção</option>
+                                            <option value="Educação"              {{"Educação" == $post->tipo ? 'selected' : ''}} >Educação</option>
+                                            <option value="Entretenimento"        {{"Entretenimento" == $post->tipo ? 'selected' : ''}} >Entretenimento</option>
+                                            <option value="Esporte"               {{"Esporte" == $post->tipo ? 'selected' : ''}} >Esporte</option>
+                                            <option value="Farmácias de plantão"  {{"Farmácias de plantão" == $post->tipo ? 'selected' : ''}} >Farmácias de plantão</option>
+                                            <option value="Mensagens"             {{"Mensagens" == $post->tipo ? 'selected' : ''}} >Mensagens</option>
+                                            <option value="Nota de falecimento"   {{"Nota de falecimento" == $post->tipo ? 'selected' : ''}} >Nota de falecimento</option>
+                                            <option value="Notícias Especiais"    {{"Notícias Especiais" == $post->tipo ? 'selected' : ''}} >Notícias Especiais</option>
+                                            <option value="O Ligeirinho"          {{"O Ligeirinho" == $post->tipo ? 'selected' : ''}} >O Ligeirinho</option>
+                                            <option value="Ocorrências Policiais" {{"Ocorrências Policiais" == $post->tipo ? 'selected' : ''}} >Ocorrências Policiais</option>
+                                            <option value="Para Refletir"         {{"Para Refletir" == $post->tipo ? 'selected' : ''}} >Para Refletir</option>
+                                            <option value="Parceiros"             {{"Parceiros" == $post->tipo ? 'selected' : ''}} >Parceiros</option>
+                                            <option value="Qualidade de vida"     {{"Qualidade de vida" == $post->tipo ? 'selected' : ''}} >Qualidade de vida</option>
+                                            <option value="Receitas"              {{"Receitas" == $post->tipo ? 'selected' : ''}} >Receitas</option>
+                                            <option value="Região"                {{"Região" == $post->tipo ? 'selected' : ''}} >Região</option>
+                                            <option value="Senac"                 {{"Senac" == $post->tipo ? 'selected' : ''}} >Senac</option>
+                                            <option value="Testando"              {{"Testando" == $post->tipo ? 'selected' : ''}} >Testando</option>
+                                            <option value="Todos"                 {{"Todos" == $post->tipo ? 'selected' : ''}} >Todos</option>
+                                            <option value="Turismo"               {{"Turismo" == $post->tipo ? 'selected' : ''}} >Turismo</option>
+                                            <option value="Vagas de empregos"     {{"Vagas de empregos" == $post->tipo ? 'selected' : ''}} >Vagas de empregos</option>
+                                            <option value="Vídeos"                {{"Vídeos" == $post->tipo ? 'selected' : ''}} >Vídeos</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
@@ -116,7 +130,6 @@
 
 
                                     <div class="demo-inline-spacing" style="display: flex; justify-content: right">
-
                                         <button type="submit" class="btn btn-primary">Enviar</button>
                                     </div>
                                 </div>
@@ -127,5 +140,4 @@
             </div>
             </div>
         </form>
-    @endforeach
 @endsection

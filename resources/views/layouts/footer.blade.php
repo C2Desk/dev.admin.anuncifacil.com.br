@@ -1,6 +1,6 @@
 <footer class="content-footer footer bg-footer-theme">
     <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-        <div class="mb-2 mb-md-0" style="display:flex; justify-content:center">
+        <div class="mb-2 mb-md-0">
 
             <p> © 2023 • Desenvolvido por <span> <a href="https://www.c2desk.com.br/"  class="footer-link fw-bolder">C2Desk.</a></span></p>
         </div>

@@ -5,7 +5,7 @@
                 <th>Fotos</th>
                 <th>Titulo</th>
                 <th class="d-none d-md-block">Categoria</th>
-                <th>Data</th>
+                <th style="width: 127px;">Data</th>
                 <th class="d-none d-md-block">Destaque</th>
                 <!-- <th class="d-none d-md-block">Status</th> -->
 
@@ -18,11 +18,13 @@
                 @csrf
             @foreach ($posts as $post)
                 <tr>
-                    <input type="hidden" class="delete" value="{{ $post->id }}">
+                    <input type="hidden" class="delete" value="{{ $post->id }}" >
+                    <!-- <div>{{ Storage::url($post->foto) }}</div> -->
                     <td><img src="{{ Storage::url($post->foto) }}"style="width:100px; height 100px" /></td>
                     <td>{{ $post->titulo }}</td>
                     <th>{{ $post->tipo }}</th>
-                    <td>{{ $post->data }}</td>
+                    <td>{{ date('d-m-Y',strtotime($post->data))}}</td>
+                    <!-- <td>{{ $post->data}}</td> -->
 
 
                     <!-- <td>{{ $post->destaque }}</td> -->

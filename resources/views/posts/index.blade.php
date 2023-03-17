@@ -45,7 +45,7 @@
 
         <!--/ Hoverable Table rows -->
 
-        <hr class="my-5" />
+        <!-- <hr class="my-5" /> -->
         <script>
             $(document).ready(function() {
                 carregarTabela(0);

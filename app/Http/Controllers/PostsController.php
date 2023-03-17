@@ -26,7 +26,7 @@ class PostsController extends Controller
     {
         $posts = Post::when(request('nome') != null, function ($query) {
             return $query->where('titulo', 'like', '%' . request('nome') . '%');
-        })->orderBy('id', 'DESC')->paginate(10);
+        })->orderBy('id', 'DESC')->paginate(10)->onEachSide(-1);
         return view('posts.list')->with('posts', $posts);
     }
 
@@ -115,14 +115,15 @@ class PostsController extends Controller
         if (!$postModel = Post::find($idpost)) {
             return redirect()->back();
         }
-        $posts = $postModel->edit($idpost);
+        $post = $postModel->edit($idpost);
         return view('posts/edit', [
-            'posts' => $posts
+            'post' => $post
         ]);
     }
 
     public function updateDestaque(Request $request, Post $postModel)
     {
+
         $status = ($request->input('status') == 'true') ? 'on' : 'off';
         $postModel->updateDestaque($request->input('id'), $status);
 
@@ -147,6 +148,7 @@ class PostsController extends Controller
             'texto_post.min' => 'O campo texto deve ter pelo menos 5 caracteres.',
 
         ];
+
         $request->validate([
             'tipo_post' => 'required|nullable',
             'titulo_post' => 'required|nullable|min:5',
@@ -178,8 +180,9 @@ class PostsController extends Controller
             $foto = $request->input('foto1_posts_db');
         };
 
-        $data = $request->input('data');
-        $postModel->updatePost($id, $ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status);
+        $data = $request->input('dataPost');
+
+        $postModel->updatePost($id, $ip, $titulo, $sub_titulo, $descr, $foto, $foto2, $legenda, $texto, $video, $por, $tipo, $link, $destaque, $status, $data);
         return redirect('posts');
     }
 

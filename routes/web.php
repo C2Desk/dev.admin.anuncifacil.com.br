@@ -74,5 +74,6 @@ Route::post('/ckeditor',[PubController::class, 'uploadimage'])->name('ckeditor.u
 Route::get('/account/profile',[AccountController::class, 'profile'])->name('account.profile');
 Route::get('/account/users',[AccountController::class, 'users'])->name('account.users');
 Route::get('/account/list', [AccountController::class, 'paginacao'])->name('account.list');
+Route::get('/account/register', [AccountController::class, 'create'])->name('account.create');
 
 require __DIR__.'/auth.php';

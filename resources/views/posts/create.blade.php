@@ -39,7 +39,7 @@
                                     </button>-->
                                 </div>
                                 <div class="form-check form-switch mb-3" style="justify-content:right; display:flex; gap:60px ">
-         
+
                                         <label class="form-check-label" for="flexSwitchCheckChecked">Status</label>
 
                                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
@@ -66,12 +66,13 @@
                                             <option value="Notícias">Notícias</option>
                                             <option value="2">Destaques</option>
                                             <option value="3">Nota de Falecimento</option>
+                                            <option value="3" data-bs-toggle="modal" data-bs-target="#modalToggle">Nova Categoria</option>
                                         </select>
-                                        
+
                                     </div>
 
                                     <div class="col-sm-3 col-md-3 col-lg-4 mb-3">
-                                        
+
                                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalToggle">
                                             Nova Categoria
                                             </button>
@@ -97,14 +98,14 @@
                                             </div>
                                             </div>
                                     </div>
-                                    
-                                
-                                
-                      
-                      
 
 
-                                
+
+
+
+
+
+
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Título <b
                                         style="color:red">*</b></label>
@@ -136,7 +137,7 @@
                                     <input class="form-control" type="file" id="formFileMultiple" accept="image/png, image/jpeg" name="foto2_post" multiple />
                                 </div>
                                 <div class="mb-3">
-                                    
+
                                 </div>
 
                                 <div>
@@ -152,12 +153,12 @@
                                 <div class="demo-inline-spacing" style="display: flex; justify-content: right">
                                                 <button type="submit" class="btn btn-danger">Deletar</button>
                                                 <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
-                                                <button type="submit" class="btn btn-success">Enviar</button>    
+                                                <button type="submit" class="btn btn-success">Enviar</button>
                                             </div>
                             </div>
 
 
-                            
+
                         </div>
                     </div>
                 </div>
