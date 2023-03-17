@@ -19,7 +19,11 @@ use Psr\Container\ContainerInterface;
  * @author Nicolas Grekas <p@tchwork.com>
  * @author Mateusz Sip <mateusz.sip@gmail.com>
  *
+<<<<<<< Updated upstream
  * @template T of mixed
+=======
+ * @template-covariant T of mixed
+>>>>>>> Stashed changes
  */
 interface ServiceProviderInterface extends ContainerInterface
 {

@@ -58,9 +58,15 @@ class InputOption
     private string $description;
 
     /**
+<<<<<<< Updated upstream
      * @param string|array|null                $shortcut The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
      * @param int|null                         $mode     The option mode: One of the VALUE_* constants
      * @param string|bool|int|float|array|null $default  The default value (must be null for self::VALUE_NONE)
+=======
+     * @param string|array|null                                                             $shortcut        The shortcuts, can be null, a string of shortcuts delimited by | or an array of shortcuts
+     * @param int|null                                                                      $mode            The option mode: One of the VALUE_* constants
+     * @param string|bool|int|float|array|null                                              $default         The default value (must be null for self::VALUE_NONE)
+>>>>>>> Stashed changes
      * @param array|\Closure(CompletionInput,CompletionSuggestions):list<string|Suggestion> $suggestedValues The values used for input completion
      *
      * @throws InvalidArgumentException If option mode is invalid or incompatible

@@ -22,6 +22,12 @@ trait TranslatorTrait
 {
     private ?string $locale = null;
 
+<<<<<<< Updated upstream
+=======
+    /**
+     * @return void
+     */
+>>>>>>> Stashed changes
     public function setLocale(string $locale)
     {
         $this->locale = $locale;

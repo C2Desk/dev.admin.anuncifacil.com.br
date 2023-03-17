@@ -19,6 +19,10 @@ use Symfony\Component\Finder\SplFileInfo;
  * @author Fabien Potencier <fabien@symfony.com>
  *
  * @extends \FilterIterator<string, SplFileInfo>
+<<<<<<< Updated upstream
+=======
+ *
+>>>>>>> Stashed changes
  * @implements \RecursiveIterator<string, SplFileInfo>
  */
 class ExcludeDirectoryFilterIterator extends \FilterIterator implements \RecursiveIterator

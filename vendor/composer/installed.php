@@ -1,9 +1,15 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
+<<<<<<< Updated upstream
         'pretty_version' => 'v9.5.2',
         'version' => '9.5.2.0',
         'reference' => NULL,
+=======
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'cb48c1426e7819450663004356dbfceaeac9d08e',
+>>>>>>> Stashed changes
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -140,9 +146,9 @@
             'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(
-            'pretty_version' => '2.4.3',
-            'version' => '2.4.3.0',
-            'reference' => '67c26b443f348a51926030c83481b85718457d3d',
+            'pretty_version' => '2.4.4',
+            'version' => '2.4.4.0',
+            'reference' => '3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
             'aliases' => array(),
@@ -365,27 +371,45 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v9.5.2',
             'version' => '9.5.2.0',
             'reference' => NULL,
+=======
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'cb48c1426e7819450663004356dbfceaeac9d08e',
+>>>>>>> Stashed changes
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v1.4.1',
             'version' => '1.4.1.0',
             'reference' => '80ddf23a5d97825e79bb1018eebb6f3f985d4fa8',
+=======
+            'pretty_version' => 'v1.6.0',
+            'version' => '1.6.0.0',
+            'reference' => 'e48e3fadd7863d6b7d03464f5c4f211a828b890f',
+>>>>>>> Stashed changes
             'type' => 'project',
             'install_path' => __DIR__ . '/../laravel/pint',
             'aliases' => array(),
             'dev_requirement' => true,
         ),
         'laravel/sail' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v1.19.0',
             'version' => '1.19.0.0',
             'reference' => '4f230634a3163f3442def6a4e6ffdb02b02e14d6',
+=======
+            'pretty_version' => 'v1.21.2',
+            'version' => '1.21.2.0',
+            'reference' => '19d6fe167e2389b41fe1b4ee52293d1eaf8a43fc',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),
@@ -951,54 +975,90 @@
             'dev_requirement' => true,
         ),
         'symfony/console' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '3e294254f2191762c1d137aed4b94e966965e985',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'cbad09eb8925b6ad4fb721c7a179344dc4a19d45',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/console',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/css-selector' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => 'bf1b9d4ad8b1cf0dbde8b08e0135a2f6259b9ba1',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'aedf3cb0f5b929ec255d96bbb4909e9932c769e0',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/css-selector',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/deprecation-contracts' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v3.2.0',
             'version' => '3.2.0.0',
             'reference' => '1ee04c65529dea5d8744774d474e7cbd2f1206d3',
+=======
+            'pretty_version' => 'v3.2.1',
+            'version' => '3.2.1.0',
+            'reference' => 'e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/error-handler' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '0092696af0be8e6124b042fbe2890ca1788d7b28',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '61e90f94eb014054000bc902257d2763fac09166',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/error-handler',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/event-dispatcher' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => 'f02d108b5e9fd4a6245aa73a9d2df2ec060c3e68',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '404b307de426c1c488e5afad64403e5f145e82a5',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/event-dispatcher',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/event-dispatcher-contracts' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v3.2.0',
             'version' => '3.2.0.0',
             'reference' => '0782b0b52a737a05b4383d0df35a474303cabdae',
+=======
+            'pretty_version' => 'v3.2.1',
+            'version' => '3.2.1.0',
+            'reference' => '0ad3b6f1e4e2da5690fefe075cd53a238646d8dd',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/event-dispatcher-contracts',
             'aliases' => array(),
@@ -1011,45 +1071,75 @@
             ),
         ),
         'symfony/finder' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => 'c90dc446976a612e3312a97a6ec0069ab0c2099c',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '20808dc6631aecafbe67c186af5dcb370be3a0eb',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/finder',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/http-foundation' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.6',
             'version' => '6.2.6.0',
             'reference' => 'e8dd1f502bc2b3371d05092aa233b064b03ce7ed',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '5fc3038d4a594223f9ea42e4e985548f3fcc9a3b',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-foundation',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/http-kernel' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.6',
             'version' => '6.2.6.0',
             'reference' => '7122db07b0d8dbf0de682267c84217573aee3ea7',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'ca0680ad1e2d678536cc20e0ae33f9e4e5d2becd',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/mailer' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '29729ac0b4e5113f24c39c46746bd6afb79e0aaa',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'e4f84c633b72ec70efc50b8016871c3bc43e691e',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/mailer',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/mime' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '4b7b349f67d15cd0639955c8179a76c89f6fd610',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '62e341f80699badb0ad70b31149c8df89a2d778e',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/mime',
             'aliases' => array(),
@@ -1128,54 +1218,90 @@
             'dev_requirement' => false,
         ),
         'symfony/process' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '9ead139f63dfa38c4e4a9049cc64a8b2748c83b7',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '680e8a2ea6b3f87aecc07a6a65a203ae573d1902',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/process',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/routing' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '589bd742d5d03c192c8521911680fe88f61712fe',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'fa643fa4c56de161f8bc8c0492a76a60140b50e4',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/routing',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/service-contracts' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v3.2.0',
             'version' => '3.2.0.0',
             'reference' => 'aac98028c69df04ee77eb69b96b86ee51fbf4b75',
+=======
+            'pretty_version' => 'v3.2.1',
+            'version' => '3.2.1.0',
+            'reference' => 'a8c9cedf55f314f3a186041d19537303766df09a',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/service-contracts',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/string' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => 'b2dac0fa27b1ac0f9c0c0b23b43977f12308d0b0',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '67b8c1eec78296b85dc1c7d9743830160218993d',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/string',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/translation' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '60556925a703cfbc1581cde3b3f35b0bb0ea904c',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => '90db1c6138c90527917671cd9ffa9e8b359e3a73',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/translation',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/translation-contracts' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v3.2.0',
             'version' => '3.2.0.0',
             'reference' => '68cce71402305a015f8c1589bfada1280dc64fe7',
+=======
+            'pretty_version' => 'v3.2.1',
+            'version' => '3.2.1.0',
+            'reference' => 'dfec258b9dd17a6b24420d464c43bffe347441c8',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/translation-contracts',
             'aliases' => array(),
@@ -1188,23 +1314,47 @@
             ),
         ),
         'symfony/uid' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '8ace895bded57d6496638c9b2d3b788e05b7395b',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'd30c72a63897cfa043e1de4d4dd2ffa9ecefcdc0',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/uid',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v6.2.5',
             'version' => '6.2.5.0',
             'reference' => '44b7b81749fd20c1bdf4946c041050e22bc8da27',
+=======
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'cf8d4ca1ddc1e3cc242375deb8fc23e54f5e2a1e',
+>>>>>>> Stashed changes
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< Updated upstream
+=======
+        'symfony/yaml' => array(
+            'pretty_version' => 'v6.2.7',
+            'version' => '6.2.7.0',
+            'reference' => 'e8e6a1d59e050525f27a1f530aa9703423cb7f57',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/yaml',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+>>>>>>> Stashed changes
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
             'version' => '1.2.1.0',

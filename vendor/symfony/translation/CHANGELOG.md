@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+<<<<<<< Updated upstream
+=======
+6.2.7
+-----
+
+ * [BC BREAK] The following data providers for `ProviderFactoryTestCase` are now static:
+   `supportsProvider()`, `createProvider()`, `unsupportedSchemeProvider()`and `incompleteDsnProvider()`
+ * [BC BREAK] `ProviderTestCase::toStringProvider()` is now static
+
+>>>>>>> Stashed changes
 6.2
 ---
 

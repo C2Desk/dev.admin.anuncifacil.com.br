@@ -49,7 +49,7 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/account/profile">
+                                        <a class="dropdown-item" href="{{route('profile.edit')}}">
                                             <i class="bx bx-user me-2"></i>
                                             <span class="align-middle">Meu perfil</span>
                                         </a>

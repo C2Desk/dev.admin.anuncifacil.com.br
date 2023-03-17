@@ -14,7 +14,7 @@
                         <div class="container text-left">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <a href="#{{ route('publicidade.pdf') }}" type="button"
+                                    <a href="{{route('account.create')}}" type="button"
                                         class="btn btn-primary">Novo usuario</a>
                                 </div>
 
@@ -45,11 +45,15 @@
 
 
 
+<<<<<<< Updated upstream
                         <div class="table-responsive">
 
 
 
                         </div>
+=======
+                        <div class="table-responsive"></div>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
@@ -94,5 +98,9 @@
                 $('.table-responsive').html(data);
             });
         }
+<<<<<<< Updated upstream
     </script>
+=======
+     </script>
+>>>>>>> Stashed changes
 @endsection

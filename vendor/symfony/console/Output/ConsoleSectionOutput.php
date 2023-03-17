@@ -115,7 +115,12 @@ class ConsoleSectionOutput extends StreamOutput
             // re-add the line break (that has been removed in the above `explode()` for
             // - every line that is not the last line
             // - if $newline is required, also add it to the last line
+<<<<<<< Updated upstream
             if ($i < $count || $newline) {
+=======
+            // - if it's not new line, but input ending with `\PHP_EOL`
+            if ($i < $count || $newline || str_ends_with($input, \PHP_EOL)) {
+>>>>>>> Stashed changes
                 $lineContent .= \PHP_EOL;
             }
 
@@ -149,6 +154,18 @@ class ConsoleSectionOutput extends StreamOutput
         return $linesAdded;
     }
 
+<<<<<<< Updated upstream
+=======
+    /**
+     * @internal
+     */
+    public function addNewLineOfInputSubmit()
+    {
+        $this->content[] = \PHP_EOL;
+        ++$this->lines;
+    }
+
+>>>>>>> Stashed changes
     protected function doWrite(string $message, bool $newline)
     {
         if (!$this->isDecorated()) {

@@ -17,7 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< Updated upstream
 //Posts
+=======
+Route::get('/',[DashController::class,'index']) ->middleware('auth');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+});
+>>>>>>> Stashed changes
 
 Route::get('/', [DashController::class, 'index']);
 
@@ -28,7 +43,7 @@ Route::get('/posts/list', [PostsController::class, 'paginacao'])->name('posts.li
 Route::get('/posts/create', [PostsController::class, 'create']);
 Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save');
 
-/*UPDATE*/
+//UPDATE
 Route::get('/posts/edit/{id}', [PostsController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{id}', [PostsController::class, 'update'])->name('posts.update');
 
@@ -56,5 +71,14 @@ Route::post('/ckeditor',[PubController::class, 'uploadimage'])->name('ckeditor.u
 
 
 //Accouts
+
 Route::get('/account/profile',[AccountController::class, 'profile'])->name('account.profile');
 Route::get('/account/users',[AccountController::class, 'users'])->name('account.users');
+<<<<<<< Updated upstream
+=======
+Route::get('/account/list', [AccountController::class, 'paginacao'])->name('account.list');
+Route::get('/account/register', [AccountController::class, 'create'])->name('account.create');
+
+require __DIR__.'/auth.php';
+
+>>>>>>> Stashed changes

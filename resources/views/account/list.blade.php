@@ -1,8 +1,8 @@
 <table id="tabela" class="table table-striped table-bordered first">
     <thead>
         <tr>
-            <th>Titulo</th>
-            <th>Categoria</th>
+            <th>Nome</th>
+            <th>Email</th>
             <th>Data</th>
             <th>Destaque</th>
             <th>Status</th>
@@ -12,14 +12,14 @@
     </thead>
     <tbody>
 
-        @foreach ($posts as $post)
+        @foreach ($accounts as $account)
             <tr>
-                <input type="hidden" class="delete" value="{{ $post->id }}">
-                <td>{{ $post->titulo }}</td>
-                <th>{{ $post->tipo }}</th>
-                <td>{{ $post->data }}</td>
-                <td>{{ $post->destaque }}</td>
-                @if ($post->status == 'on')
+                <input type="hidden" class="delete" value="{{ $account->id }}">
+                <td>{{ $account->name }}</td>
+                <th>{{ $account->email }}</th>
+                <td>{{ $account->data }}</td>
+                <td>{{ $account->destaque }}</td>
+                @if ($account->status == 'on')
                     <td><span class="badge bg-label-success me-1">Habilitado</span></td>
                 @else
                     <td><span class="badge bg-label-primary me-1">Desabilitado</span></td>
@@ -31,7 +31,7 @@
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
                             data-bs-placement="top" class="avatar avatar-xs pull-up"
                             title="Lilian Fuller">
-                            <img src="{{ Storage::url($post->foto) }}" alt="Avatar"
+                            <img src="{{ Storage::url($account->foto) }}" alt="Avatar"
                                 class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom"
@@ -55,7 +55,7 @@
                             <i class="bx bx-dots-vertical-rounded"></i>
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/posts/edit/{{ $post->id }}"><i
+                            <a class="dropdown-item" href="/posts/edit/{{ $account->id }}"><i
                                     class="bx bx-edit-alt me-1"></i>
                                 Edit</a>
                             <a class="dropdown-item deletebtn" href="#"><i
@@ -69,8 +69,8 @@
     </tbody>
     <tfoot>
         <tr>
-            <th>Titulo</th>
-            <th>Categoria</th>
+            <th>Nome</th>
+            <th>Email</th>
             <th>Data</th>
             <th>Destaque</th>
             <th>Status</th>
@@ -82,7 +82,7 @@
 
 </div>
 <div class="py-4">
-{{ $posts->links() }}
+{{ $accounts->links() }}
 </div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

@@ -76,12 +76,28 @@ class SymfonyCaster
 
         $stub->cut += \count($a) - 1;
 
+<<<<<<< Updated upstream
         return ['status' => new ConstStub(match ($a['status']) {
+=======
+        $instance = $a['realInstance'] ?? null;
+
+        $a = ['status' => new ConstStub(match ($a['status']) {
+>>>>>>> Stashed changes
             LazyObjectState::STATUS_INITIALIZED_FULL => 'INITIALIZED_FULL',
             LazyObjectState::STATUS_INITIALIZED_PARTIAL => 'INITIALIZED_PARTIAL',
             LazyObjectState::STATUS_UNINITIALIZED_FULL => 'UNINITIALIZED_FULL',
             LazyObjectState::STATUS_UNINITIALIZED_PARTIAL => 'UNINITIALIZED_PARTIAL',
         }, $a['status'])];
+<<<<<<< Updated upstream
+=======
+
+        if ($instance) {
+            $a['realInstance'] = $instance;
+            --$stub->cut;
+        }
+
+        return $a;
+>>>>>>> Stashed changes
     }
 
     public static function castUuid(Uuid $uuid, array $a, Stub $stub, bool $isNested)
