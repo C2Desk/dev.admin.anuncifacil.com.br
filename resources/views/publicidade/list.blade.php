@@ -59,7 +59,7 @@
             <th>Categoria</th>
             <th>Status</th>
             <th>Enviado</th>
-            <th>Fotos</th>
+            <!-- <th>Fotos</th> -->
             <th>Ações</th>
        </tr>
     </tfoot>
