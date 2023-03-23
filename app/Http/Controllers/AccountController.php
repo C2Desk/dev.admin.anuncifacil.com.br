@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Account;
 
 class AccountController extends Controller
 {
@@ -13,13 +12,17 @@ class AccountController extends Controller
     public function users(){
         return view('/account/users');
     }
+
+    public function create(){
+        return view('/account/register');
+    }
     public function paginacao()
     {
 
         $id = Account::when(request('nome') != null, function ($query) {
-            return $query->where('titulo', 'like', '%' . request('nome') . '%');
+            return $query->where('name', 'like', '%' . request('nome') . '%');
         })->orderBy('id', 'DESC')->paginate(15);
-        return view('posts.list')->with('posts', $id);
+        return view('account.list')->with('accounts', $id);
     }
 
 }

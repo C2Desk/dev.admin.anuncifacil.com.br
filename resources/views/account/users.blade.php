@@ -14,7 +14,7 @@
                         <div class="container text-left">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <a href="#{{ route('publicidade.pdf') }}" type="button"
+                                    <a href="{{route('account.create')}}" type="button"
                                         class="btn btn-primary">Novo usuario</a>
                                 </div>
 
@@ -44,31 +44,8 @@
                         </div>
 
 
-                        <div class="row">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>id</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>data cadastro</th>
-                                    <th>ultima alteração</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($users as $user)
-                                    <tr>
-                                        <td>{{$user->id}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->created_at}}</td>
-                                        <td>{{$user->updated_at}}</td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- <div class="table-responsive"></div> -->
+
+                        <div class="table-responsive"></div>
                     </div>
                 </div>
             </div>
@@ -76,7 +53,7 @@
 
     </div>
 
-    <!-- <script>
+    <script>
         $(document).ready(function() {
             carregarTabela(0);
         });
@@ -106,12 +83,12 @@
 
 
             $.ajax({
-                url: "{{ route('account.list') }}",
+                url: "{{ route('posts.list') }}",
                 method: 'GET',
                 data: dados
             }).done(function(data) {
                 $('.table-responsive').html(data);
             });
         }
-     </script> -->
+     </script>
 @endsection

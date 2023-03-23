@@ -145,12 +145,12 @@
 
                                             <div style="display:grid; text-align:left; align-itens:center">
                                                 <label for="exampleFormControlTextarea1" class="form-label">Anotações</label>
-                                                <textarea style="background-color:#1b2026; color: #ffffff " class="form-control" name="descr_post"
+                                                <textarea  class="form-control" name="descr_post"
                                                     id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div><br>
                                             <div style="display:grid; text-align:left; align-itens:center">
                                                 <label for="exampleFormControlTextarea1" class="form-label">Conteúdo</label>
-                                                <textarea style="background-color:#1b2026; color: #ffffff " class="form-control" name="descr_post"
+                                                <textarea  class="form-control" name="descr_post"
                                                     id="editor" rows="3"></textarea>
                                             </div>
                                             <div class="demo-inline-spacing" style="display: flex; justify-content: right">

@@ -43,7 +43,7 @@ Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save'
 
 /*UPDATE*/
 Route::get('/posts/edit/{id}', [PostsController::class, 'edit'])->name('posts.edit');
-Route::put('/posts/update', [PostsController::class, 'update'])->name('posts.update');
+Route::post('/posts/update', [PostsController::class, 'update'])->name('posts.update');
 Route::put('/posts/destaque', [PostsController::class, 'updateDestaque'])->name('posts.destaque');
 
 
