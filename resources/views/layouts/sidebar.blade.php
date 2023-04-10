@@ -88,10 +88,10 @@
             </a>
         </li>
 
-        <li class="menu-item {{'posts/social' == request()->path() ? 'active' : ''}}">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <!-- <li class="menu-item {{'posts/social' == request()->path() ? 'active' : ''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle"> -->
             <!-- <i class='menu-icon tf-icons bx bx-plus-circle'></i> -->
-            <i class="menu-icon tf-icons  bx bx-send"></i>
+            <!-- <i class="menu-icon tf-icons  bx bx-send"></i>
 
                 <div data-i18n="Account Settings">Social Posts</div>
             </a>
@@ -108,7 +108,7 @@
                 </li>
 
             </ul>
-        </li>
+        </li> -->
 
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Publicidades</span></li>
         <!--  Publicidades -->

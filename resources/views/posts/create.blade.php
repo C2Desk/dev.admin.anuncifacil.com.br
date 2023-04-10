@@ -58,14 +58,15 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-3 col-md-3 col-lg-8 mb-3">
+                                    <!-- <div class="col-sm-3 col-md-3 col-lg-8 mb-3"> -->
+                                    <div class=" mb-3">
                                         <label for="exampleFormControlSelect1" class="form-label">Categoria <b
                                             style="color:red">*</b></label>
                                         <select class="form-select" id="exampleFormControlSelect1" name="tipo_post" aria-label="Default select example">
                                             <option value="" selected>Selecione uma opção</option>
-                                            <option value="Notícias">Notícias</option>
-                                            <option value="2">Destaques</option>
-                                            <option value="3">Nota de Falecimento</option>
+                                            <option value="Notícias">Nota Categoria +</option>
+                                            <option value="2">Assai</option>
+                                            <option value="3">Cornélio Procópio</option>
                                             <option value="3" data-bs-toggle="modal" data-bs-target="#modalToggle">Nova Categoria</option>
                                         </select>
 
@@ -73,9 +74,9 @@
 
                                     <div class="col-sm-3 col-md-3 col-lg-4 mb-3">
 
-                                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalToggle">
+                                            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalToggle">
                                             Nova Categoria
-                                            </button>
+                                            </button> -->
 
                                             <!-- Modal Categoria-->
                                             <div class="modal fade" id="modalToggle"aria-labelledby="modalToggleLabel" tabindex="-1"

@@ -71,6 +71,18 @@
                                             <option value="Vídeos"                {{"Vídeos" == $post->tipo ? 'selected' : ''}} >Vídeos</option>
                                         </select>
                                     </div>
+                                    <div class=" mb-3">
+                                        <label for="exampleFormControlSelect1" class="form-label">Categoria <b
+                                            style="color:red">*</b></label>
+                                        <select class="form-select" id="exampleFormControlSelect1" name="tipo_post" aria-label="Default select example">
+                                            <option value="" selected>Selecione uma opção</option>
+                                            <option value="Notícias">Nota Categoria +</option>
+                                            <option value="2">Assai</option>
+                                            <option value="3">Cornélio Procópio</option>
+                                            <option value="3" data-bs-toggle="modal" data-bs-target="#modalToggle">Nova Categoria</option>
+                                        </select>
+
+                                    </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Título <b style="color:red">*</b></label>
                                         <input type="text" class="form-control" id="exampleFormControlInput1"
