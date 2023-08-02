@@ -198,4 +198,24 @@ class PubController extends Controller
             return response()->json([' fileName' => $fileName, 'uploaded' => 1, 'url' => $url]);
         }
     }
+
+
+    public function recibo(Publicidade $pubModel, $idpub)
+    {
+        $publicidade = $pubModel->recibo($idpub);
+
+
+        return view('publicidade/edit', [
+            'publicidade' => $publicidade
+        ]);
+    }
+    public function recibos(Publicidade $pubModel)
+    {
+        $publicidade = $pubModel->recibos();
+
+
+        return view('publicidade/edit', [
+            'publicidade' => $publicidade
+        ]);
+    }
 }

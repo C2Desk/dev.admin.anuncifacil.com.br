@@ -30,6 +30,7 @@
                     </div><br>
                             <div class="table-responsive"> </div>
                             <div class="demo-inline-spacing" style="display: flex; justify-content: right">
+                                <a href="{{ route('publicidade.recibos') }}" type="button" class="btn btn-dark">Recibos</a>
                               <a href="{{ route('publicidade.pdf') }}" type="button" class="btn btn-dark">Imprimir</a>
                             </div>
 

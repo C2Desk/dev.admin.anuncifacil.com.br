@@ -43,6 +43,7 @@ Route::post('/posts/save', [PostsController::class, 'store'])->name('posts.save'
 
 /*UPDATE*/
 Route::get('/posts/edit/{id}', [PostsController::class, 'edit'])->name('posts.edit');
+
 Route::post('/posts/update', [PostsController::class, 'update'])->name('posts.update');
 Route::put('/posts/destaque', [PostsController::class, 'updateDestaque'])->name('posts.destaque');
 
@@ -58,10 +59,12 @@ Route::get('/publicidade/list', [PubController::class, 'paginacao'])->name('publ
 
 Route::get('/publicidade/create', [PubController::class, 'create']);
 Route::get('/publicidade/pdf', [PubController::class, 'pdf'])->name('publicidade.pdf');
+Route::get('/publicidade/recibos', [PubController::class, 'recibos'])->name('publicidade.recibos');
 Route::post('/publicidade/save', [PubController::class, 'store'])->name('publicidade.save');
 
 
 Route::get('/publicidade/edit/{id}', [PubController::class, 'edit'])->name('publicidade.edit');
+Route::get('/publicidade/recibo/{id}', [PubController::class, 'recibo'])->name('publicidade.recibo');
 Route::put('/publicidade/{id}', [PubController::class, 'update'])->name('publicidade.update');
 
 Route::delete('/publicidade/delete/{id}',[PubController::class, 'destroy'])->name('publicidade.destroy');
